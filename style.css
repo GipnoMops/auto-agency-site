@@ -39,7 +39,7 @@ body {
 }
 
 .logo img {
-    height:60px;
+    height:40px;
 }
 
 
@@ -87,7 +87,7 @@ body {
     background:#f7f7f7;
 }
 
-<!--
+/*
 /* CARS */
 
 .cars {
@@ -119,7 +119,7 @@ body {
     object-fit:cover;
     border-radius:6px;
 }
--->
+*/
 
 /* CONTACT */
 
