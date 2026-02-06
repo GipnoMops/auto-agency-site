@@ -26,6 +26,23 @@ body {
     text-decoration:none;
 }
 
+.logo {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:20px;
+}
+
+.logo span {
+    color: rgb(182, 200, 144);
+}
+
+.logo img {
+    height:40px;
+}
+
+
 /* HERO */
 
 .hero {
@@ -81,20 +98,27 @@ body {
 
 .cars-grid {
     margin-top:40px;
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap:30px;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
 }
 
 .car {
+    width:280px;
     background:white;
     color:black;
-    padding:20px;
+    padding:15px;
+    border-radius:8px;
 }
 
 .car img {
     width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:6px;
 }
+
 
 /* CONTACT */
 
