@@ -1,0 +1,122 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+
+.header {
+    background:black;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    padding:20px 40px;
+    position:sticky;
+    top:0;
+}
+
+.header a {
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+}
+
+/* HERO */
+
+.hero {
+    height:90vh;
+    background:url("images/hero.jpg") center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-align:center;
+}
+
+.hero h1 {
+    font-size:50px;
+}
+
+/* ABOUT */
+
+.about {
+    background:#eee;
+    padding:50px;
+    text-align:center;
+    font-size:18px;
+}
+
+/* WHY */
+
+.why {
+    padding:70px 20px;
+    text-align:center;
+}
+
+.why-grid {
+    margin-top:40px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap:30px;
+}
+
+.why-card {
+    padding:30px;
+    background:#f7f7f7;
+}
+
+/* CARS */
+
+.cars {
+    background:#222;
+    color:white;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.cars-grid {
+    margin-top:40px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:30px;
+}
+
+.car {
+    background:white;
+    color:black;
+    padding:20px;
+}
+
+.car img {
+    width:100%;
+}
+
+/* CONTACT */
+
+.contact {
+    background:black;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.contact iframe {
+    width:100%;
+    height:300px;
+    border:none;
+    margin-top:20px;
+}
+
+/* FOOTER */
+
+footer {
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
