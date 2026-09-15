@@ -4,11 +4,11 @@ const WHATSAPP = "48451675575";
 const translations = {
     pl: {
         navWhy: "Dlaczego my",
-        navConfigurator: "Skonfiguruj auto",
-        navContact: "Kontakt",
+        navConfigurator: "Podobierz auto",
+        navContact: "Kontakty",
         heroTitle: "Import samochodów z USA",
         heroText: "Pomagamy znaleźć i dostarczyć Twój wymarzony samochód",
-        heroButton: "Skonfiguruj swój samochód",
+        heroButton: "Podobierz swój samochód",
         about: "Kompleksowa obsługa importu samochodów. Wybór, transport, dokumenty i dostawa pod dom klienta.",
         whyTitle: "Dlaczego Auto Agency?",
         why1Title: "Wybieramy samochód, który chcesz",
@@ -22,8 +22,10 @@ const translations = {
         why5Title: "Eksport",
         why5Text: "Zapewniamy pełen zakres usług związanych z organizacją eksportu samochodów poza UE.",
         configEyebrow: "DOBÓR SAMOCHODU",
-        configTitle: "Skonfiguruj swoje auto",
+        configTitle: "Podobierz swoje auto",
         configIntro: "Podaj swoje wymagania, a my znajdziemy samochód odpowiadający Twoim oczekiwaniom.",
+        carDetails: "Samochód",
+        contactDetails: "Dane kontaktowe",
         brand: "Marka",
         model: "Model",
         year: "Rok produkcji",
@@ -83,6 +85,8 @@ const translations = {
         configEyebrow: "CAR SELECTION",
         configTitle: "Configure your car",
         configIntro: "Tell us what you are looking for and we will find a car that matches your requirements.",
+        carDetails: "Car",
+        contactDetails: "Contact details",
         brand: "Make",
         model: "Model",
         year: "Production year",
@@ -142,6 +146,8 @@ const translations = {
         configEyebrow: "ПОДБОР АВТОМОБИЛЯ",
         configTitle: "Подберите свой автомобиль",
         configIntro: "Укажите ваши требования, а мы найдём автомобиль, который им соответствует.",
+        carDetails: "Автомобиль",
+        contactDetails: "Контактные данные",
         brand: "Марка",
         model: "Модель",
         year: "Год выпуска",
@@ -189,23 +195,18 @@ function t(key) {
 
 function setLanguage(lang) {
     if (!translations[lang]) return;
-
     currentLang = lang;
     localStorage.setItem("autoAgencyLanguage", lang);
     document.documentElement.lang = lang;
 
     document.querySelectorAll("[data-i18n]").forEach(element => {
-        const key = element.dataset.i18n;
-        if (translations[lang][key]) {
-            element.textContent = translations[lang][key];
-        }
+        const value = translations[lang][element.dataset.i18n];
+        if (value) element.textContent = value;
     });
 
     document.querySelectorAll("[data-placeholder]").forEach(element => {
-        const key = element.dataset.placeholder;
-        if (translations[lang][key]) {
-            element.placeholder = translations[lang][key];
-        }
+        const value = translations[lang][element.dataset.placeholder];
+        if (value) element.placeholder = value;
     });
 
     document.querySelectorAll(".lang-btn").forEach(button => {
@@ -233,8 +234,6 @@ function selectedValue(name) {
 }
 
 function displayValue(value) {
-    if (!value) return t("noPreference");
-
     const map = {
         Manual: t("manual"),
         Automatic: t("automatic"),
@@ -246,8 +245,7 @@ function displayValue(value) {
         Wagon: t("wagon"),
         Convertible: t("convertible")
     };
-
-    return map[value] || value;
+    return map[value] || value || t("noPreference");
 }
 
 function getFormData() {
@@ -298,10 +296,6 @@ function buildMessage(data) {
     ].join("\n");
 }
 
-function validateContact(data) {
-    return data.phone || data.email;
-}
-
 document.addEventListener("DOMContentLoaded", () => {
     setLanguage(currentLang);
     fillYears();
@@ -318,10 +312,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", event => {
         event.preventDefault();
-
         const data = getFormData();
 
-        if (!validateContact(data)) {
+        if (!data.phone && !data.email) {
             message.textContent = t("formErrorContact");
             return;
         }
@@ -336,7 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("whatsappButton").addEventListener("click", () => {
         const data = getFormData();
 
-        if (!validateContact(data)) {
+        if (!data.phone && !data.email) {
             message.textContent = t("formErrorContact");
             return;
         }
@@ -352,10 +345,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav = document.getElementById("mainNav");
 
     menuToggle.addEventListener("click", () => {
-        nav.classList.toggle("open");
+        const open = nav.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(open));
     });
 
     nav.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => nav.classList.remove("open"));
+        link.addEventListener("click", () => {
+            nav.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+        });
     });
 });

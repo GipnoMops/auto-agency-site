@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Auto Agency — import samochodów z USA. Znajdziemy, kupimy i dostarczymy Twój samochód.">
+<meta name="description" content="Auto Agency — import samochodów z USA.">
 <title>Auto Agency</title>
 
 <link rel="icon" type="image/png" href="images/favicon.png">
@@ -19,20 +19,19 @@
         <span>AUTO AGENCY</span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menu">☰</button>
-
     <nav id="mainNav">
         <a href="#why" data-i18n="navWhy">Dlaczego my</a>
-        <a href="#configurator" data-i18n="navConfigurator">Skonfiguruj auto</a>
-        <a href="#contact" data-i18n="navContact">Kontakt</a>
+        <a href="#configurator" data-i18n="navConfigurator">Podobierz auto</a>
+        <a href="#contact" data-i18n="navContact">Kontakty</a>
         <a class="phone" href="tel:+48451675575">+48 451 675 575</a>
-
         <div class="language-switcher" aria-label="Language">
             <button type="button" class="lang-btn active" data-lang="pl">PL</button>
             <button type="button" class="lang-btn" data-lang="en">EN</button>
             <button type="button" class="lang-btn" data-lang="ru">RU</button>
         </div>
     </nav>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
 </header>
 
 <main id="top">
@@ -41,184 +40,187 @@
     <div class="hero-content">
         <h1 data-i18n="heroTitle">Import samochodów z USA</h1>
         <p data-i18n="heroText">Pomagamy znaleźć i dostarczyć Twój wymarzony samochód</p>
-        <a class="hero-button" href="#configurator" data-i18n="heroButton">Skonfiguruj swój samochód</a>
+        <a class="hero-button" href="#configurator" data-i18n="heroButton">Podobierz swój samochód</a>
     </div>
 </section>
 
 <section class="about">
-    <p data-i18n="about">
-        Kompleksowa obsługa importu samochodów. Wybór, transport,
-        dokumenty i dostawa pod dom klienta.
-    </p>
+    <p data-i18n="about">Kompleksowa obsługa importu samochodów. Wybór, transport, dokumenty i dostawa pod dom klienta.</p>
 </section>
 
 <section id="why" class="why">
-    <h2 data-i18n="whyTitle">Dlaczego Auto Agency?</h2>
+    <div class="container">
+        <h2 data-i18n="whyTitle">Dlaczego Auto Agency?</h2>
 
-    <div class="why-grid">
-        <div class="why-card">
-            <h3>01</h3>
-            <h4 data-i18n="why1Title">Wybieramy samochód, który chcesz</h4>
-            <p data-i18n="why1Text">Określasz wymagania i budżet pojazdu — znajdziemy odpowiedni samochód zgodnie z Twoimi oczekiwaniami.</p>
-        </div>
+        <div class="why-grid">
+            <article class="why-card">
+                <span class="card-number">01</span>
+                <h3 data-i18n="why1Title">Wybieramy samochód, który chcesz</h3>
+                <p data-i18n="why1Text">Określasz wymagania i budżet pojazdu — znajdziemy odpowiedni samochód zgodnie z Twoimi oczekiwaniami.</p>
+            </article>
 
-        <div class="why-card">
-            <h3>02</h3>
-            <h4 data-i18n="why2Title">Podpisujemy umowę, depozyt</h4>
-            <p data-i18n="why2Text">Zawieramy umowę na wyszukanie i zakup samochodu. Depozyt jest zwracany w całości, jeśli samochód nie zostanie zakupiony.</p>
-        </div>
+            <article class="why-card">
+                <span class="card-number">02</span>
+                <h3 data-i18n="why2Title">Podpisujemy umowę, depozyt</h3>
+                <p data-i18n="why2Text">Zawieramy umowę na wyszukanie i zakup samochodu. Depozyt jest zwracany w całości, jeśli samochód nie zostanie zakupiony.</p>
+            </article>
 
-        <div class="why-card">
-            <h3>03</h3>
-            <h4 data-i18n="why3Title">Transportujemy Twój samochód</h4>
-            <p data-i18n="why3Text">Organizujemy dostawę samochodu do Polski. Samochód jest ubezpieczony podczas transportu.</p>
-        </div>
+            <article class="why-card">
+                <span class="card-number">03</span>
+                <h3 data-i18n="why3Title">Transportujemy Twój samochód</h3>
+                <p data-i18n="why3Text">Organizujemy dostawę samochodu do Polski. Samochód jest ubezpieczony podczas transportu.</p>
+            </article>
 
-        <div class="why-card">
-            <h3>04</h3>
-            <h4 data-i18n="why4Title">Odbierasz samochód i dokumenty</h4>
-            <p data-i18n="why4Text">Gdy wszystkie dokumenty będą gotowe, odbierzesz samochód albo dostarczymy go pod Twój dom.</p>
-        </div>
+            <article class="why-card">
+                <span class="card-number">04</span>
+                <h3 data-i18n="why4Title">Odbierasz samochód i dokumenty</h3>
+                <p data-i18n="why4Text">Gdy wszystkie dokumenty będą gotowe, odbierzesz samochód albo dostarczymy go pod Twój dom.</p>
+            </article>
 
-        <div class="why-card">
-            <h3>05</h3>
-            <h4 data-i18n="why5Title">Eksport</h4>
-            <p data-i18n="why5Text">Zapewniamy pełen zakres usług związanych z organizacją eksportu samochodów poza UE.</p>
+            <article class="why-card">
+                <span class="card-number">05</span>
+                <h3 data-i18n="why5Title">Eksport</h3>
+                <p data-i18n="why5Text">Zapewniamy pełen zakres usług związanych z organizacją eksportu samochodów poza UE.</p>
+            </article>
         </div>
     </div>
 </section>
 
 <section id="configurator" class="configurator">
-    <div class="configurator-inner">
+    <div class="configurator-card">
         <div class="section-heading">
             <span class="eyebrow" data-i18n="configEyebrow">DOBÓR SAMOCHODU</span>
-            <h2 data-i18n="configTitle">Skonfiguruj swoje auto</h2>
+            <h2 data-i18n="configTitle">Podobierz swoje auto</h2>
             <p data-i18n="configIntro">Podaj swoje wymagania, a my znajdziemy samochód odpowiadający Twoim oczekiwaniom.</p>
         </div>
 
         <form id="carForm">
-            <div class="form-grid">
-                <div class="field">
-                    <label for="brand" data-i18n="brand">Marka</label>
-                    <select id="brand" name="brand">
-                        <option value="" data-i18n="choose">Wybierz</option>
-                        <option>Audi</option>
-                        <option>BMW</option>
-                        <option>Ford</option>
-                        <option>Mercedes-Benz</option>
-                        <option>Porsche</option>
-                        <option>Tesla</option>
-                        <option>Toyota</option>
-                        <option>Volkswagen</option>
-                        <option>Volvo</option>
-                        <option data-i18n="other">Inna</option>
-                    </select>
-                </div>
+            <div class="form-section">
+                <h3 data-i18n="carDetails">Samochód</h3>
 
-                <div class="field">
-                    <label for="model" data-i18n="model">Model</label>
-                    <input id="model" name="model" type="text" data-placeholder="modelPlaceholder" placeholder="np. X5, Mustang, Model Y">
-                </div>
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="brand" data-i18n="brand">Marka</label>
+                        <select id="brand" name="brand">
+                            <option value="" data-i18n="choose">Wybierz</option>
+                            <option>Audi</option>
+                            <option>BMW</option>
+                            <option>Ford</option>
+                            <option>Mercedes-Benz</option>
+                            <option>Porsche</option>
+                            <option>Tesla</option>
+                            <option>Toyota</option>
+                            <option>Volkswagen</option>
+                            <option>Volvo</option>
+                            <option data-i18n="other">Inna</option>
+                        </select>
+                    </div>
 
-                <div class="field">
-                    <label for="yearFrom" data-i18n="year">Rok produkcji</label>
-                    <div class="range-fields">
-                        <select id="yearFrom" name="yearFrom"></select>
-                        <span>—</span>
-                        <select id="yearTo" name="yearTo"></select>
+                    <div class="field">
+                        <label for="model" data-i18n="model">Model</label>
+                        <input id="model" name="model" type="text" data-placeholder="modelPlaceholder" placeholder="np. X5, Mustang, Model Y">
+                    </div>
+
+                    <div class="field">
+                        <label data-i18n="year">Rok produkcji</label>
+                        <div class="range-fields">
+                            <select id="yearFrom" name="yearFrom"></select>
+                            <span>—</span>
+                            <select id="yearTo" name="yearTo"></select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="mileage" data-i18n="mileage">Przebieg maksymalny</label>
+                        <select id="mileage" name="mileage">
+                            <option value="" data-i18n="noPreference">Bez znaczenia</option>
+                            <option value="50000">50 000 km</option>
+                            <option value="100000">100 000 km</option>
+                            <option value="150000">150 000 km</option>
+                            <option value="200000">200 000 km</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="field choice-field">
+                        <legend data-i18n="transmission">Skrzynia biegów</legend>
+                        <div class="choices">
+                            <label><input type="radio" name="transmission" value="Manual"><span data-i18n="manual">Manualna</span></label>
+                            <label><input type="radio" name="transmission" value="Automatic"><span data-i18n="automatic">Automatyczna</span></label>
+                            <label><input type="radio" name="transmission" value="Any" checked><span data-i18n="noPreference">Bez znaczenia</span></label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="field choice-field">
+                        <legend data-i18n="fuel">Rodzaj paliwa</legend>
+                        <div class="choices">
+                            <label><input type="radio" name="fuel" value="Petrol"><span data-i18n="petrol">Benzyna</span></label>
+                            <label><input type="radio" name="fuel" value="Diesel"><span data-i18n="diesel">Diesel</span></label>
+                            <label><input type="radio" name="fuel" value="Hybrid"><span data-i18n="hybrid">Hybryda</span></label>
+                            <label><input type="radio" name="fuel" value="Electric"><span data-i18n="electric">Elektryczny</span></label>
+                            <label><input type="radio" name="fuel" value="Any" checked><span data-i18n="noPreference">Bez znaczenia</span></label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="field choice-field full-width">
+                        <legend data-i18n="body">Nadwozie</legend>
+                        <div class="choices">
+                            <label><input type="radio" name="body" value="Sedan"><span>Sedan</span></label>
+                            <label><input type="radio" name="body" value="Wagon"><span data-i18n="wagon">Kombi</span></label>
+                            <label><input type="radio" name="body" value="SUV"><span>SUV</span></label>
+                            <label><input type="radio" name="body" value="Hatchback"><span>Hatchback</span></label>
+                            <label><input type="radio" name="body" value="Coupe"><span>Coupe</span></label>
+                            <label><input type="radio" name="body" value="Convertible"><span data-i18n="convertible">Kabriolet</span></label>
+                            <label><input type="radio" name="body" value="Any" checked><span data-i18n="noPreference">Bez znaczenia</span></label>
+                        </div>
+                    </fieldset>
+
+                    <div class="field">
+                        <label for="budget" data-i18n="budget">Budżet</label>
+                        <select id="budget" name="budget">
+                            <option value="" data-i18n="budgetAny">Bez określonego limitu</option>
+                            <option>do 10 000 €</option>
+                            <option>10 000–20 000 €</option>
+                            <option>20 000–30 000 €</option>
+                            <option>30 000–40 000 €</option>
+                            <option>40 000–50 000 €</option>
+                            <option>powyżej 50 000 €</option>
+                        </select>
                     </div>
                 </div>
+            </div>
 
-                <div class="field">
-                    <label for="mileage" data-i18n="mileage">Przebieg maksymalny</label>
-                    <select id="mileage" name="mileage">
-                        <option value="" data-i18n="noPreference">Bez znaczenia</option>
-                        <option value="50000">50 000 km</option>
-                        <option value="100000">100 000 km</option>
-                        <option value="150000">150 000 km</option>
-                        <option value="200000">200 000 km</option>
-                    </select>
-                </div>
+            <div class="form-section">
+                <h3 data-i18n="contactDetails">Dane kontaktowe</h3>
 
-                <fieldset class="field choice-field">
-                    <legend data-i18n="transmission">Skrzynia biegów</legend>
-                    <div class="choices">
-                        <label><input type="radio" name="transmission" value="Manual"><span data-i18n="manual">Manualna</span></label>
-                        <label><input type="radio" name="transmission" value="Automatic"><span data-i18n="automatic">Automatyczna</span></label>
-                        <label><input type="radio" name="transmission" value="Any" checked><span data-i18n="noPreference">Bez znaczenia</span></label>
+                <div class="form-grid contact-fields">
+                    <div class="field">
+                        <label for="contactName" data-i18n="name">Imię</label>
+                        <input id="contactName" name="name" type="text" data-placeholder="namePlaceholder" placeholder="Twoje imię">
                     </div>
-                </fieldset>
 
-                <fieldset class="field choice-field">
-                    <legend data-i18n="fuel">Rodzaj paliwa</legend>
-                    <div class="choices">
-                        <label><input type="radio" name="fuel" value="Petrol"><span data-i18n="petrol">Benzyna</span></label>
-                        <label><input type="radio" name="fuel" value="Diesel"><span data-i18n="diesel">Diesel</span></label>
-                        <label><input type="radio" name="fuel" value="Hybrid"><span data-i18n="hybrid">Hybryda</span></label>
-                        <label><input type="radio" name="fuel" value="Electric"><span data-i18n="electric">Elektryczny</span></label>
-                        <label><input type="radio" name="fuel" value="Any" checked><span data-i18n="noPreference">Bez znaczenia</span></label>
+                    <div class="field">
+                        <label for="contactPhone" data-i18n="phone">Numer telefonu</label>
+                        <input id="contactPhone" name="phone" type="tel" placeholder="+48 ...">
                     </div>
-                </fieldset>
 
-                <fieldset class="field choice-field full-width">
-                    <legend data-i18n="body">Nadwozie</legend>
-                    <div class="choices">
-                        <label><input type="radio" name="body" value="Sedan"><span>Sedan</span></label>
-                        <label><input type="radio" name="body" value="Wagon"><span data-i18n="wagon">Kombi</span></label>
-                        <label><input type="radio" name="body" value="SUV"><span>SUV</span></label>
-                        <label><input type="radio" name="body" value="Hatchback"><span>Hatchback</span></label>
-                        <label><input type="radio" name="body" value="Coupe"><span>Coupe</span></label>
-                        <label><input type="radio" name="body" value="Convertible"><span data-i18n="convertible">Kabriolet</span></label>
-                        <label><input type="radio" name="body" value="Any" checked><span data-i18n="noPreference">Bez znaczenia</span></label>
+                    <div class="field">
+                        <label for="contactEmail" data-i18n="email">Adres e-mail</label>
+                        <input id="contactEmail" name="email" type="email" placeholder="example@email.com">
                     </div>
-                </fieldset>
 
-                <div class="field">
-                    <label for="budget" data-i18n="budget">Budżet</label>
-                    <select id="budget" name="budget">
-                        <option value="" data-i18n="budgetAny">Bez określonego limitu</option>
-                        <option>do 10 000 €</option>
-                        <option>10 000–20 000 €</option>
-                        <option>20 000–30 000 €</option>
-                        <option>30 000–40 000 €</option>
-                        <option>40 000–50 000 €</option>
-                        <option>powyżej 50 000 €</option>
-                    </select>
-                </div>
-
-                <div class="field">
-                    <label for="contactName" data-i18n="name">Imię</label>
-                    <input id="contactName" name="name" type="text" data-placeholder="namePlaceholder" placeholder="Twoje imię">
-                </div>
-
-                <div class="field">
-                    <label for="contactPhone" data-i18n="phone">Numer telefonu</label>
-                    <input id="contactPhone" name="phone" type="tel" placeholder="+48 ...">
-                </div>
-
-                <div class="field">
-                    <label for="contactEmail" data-i18n="email">Adres e-mail</label>
-                    <input id="contactEmail" name="email" type="email" placeholder="example@email.com">
-                </div>
-
-                <div class="field full-width">
-                    <label for="requirements" data-i18n="requirements">Dodatkowe wymagania</label>
-                    <textarea id="requirements" name="requirements" rows="5" data-placeholder="requirementsPlaceholder" placeholder="Kolor, napęd, wyposażenie, preferowany rynek zakupu itd."></textarea>
+                    <div class="field">
+                        <label for="requirements" data-i18n="requirements">Dodatkowe wymagania</label>
+                        <textarea id="requirements" name="requirements" rows="4" data-placeholder="requirementsPlaceholder" placeholder="Kolor, napęd, wyposażenie, preferowany rynek zakupu itd."></textarea>
+                    </div>
                 </div>
             </div>
 
             <div class="form-footer">
-                <p class="privacy-note" data-i18n="privacy">
-                    Podając dane kontaktowe, zgadzasz się na kontakt w sprawie zapytania.
-                </p>
+                <p class="privacy-note" data-i18n="privacy">Podając dane kontaktowe, zgadzasz się na kontakt w sprawie zapytania.</p>
 
                 <div class="submit-buttons">
-                    <button class="submit-button whatsapp-button" type="button" id="whatsappButton">
-                        <span>WhatsApp</span>
-                    </button>
-                    <button class="submit-button email-button" type="submit">
-                        <span data-i18n="sendEmail">Wyślij e-mail</span>
-                    </button>
+                    <button class="submit-button whatsapp-button" type="button" id="whatsappButton">WhatsApp</button>
+                    <button class="submit-button email-button" type="submit" data-i18n="sendEmail">Wyślij e-mail</button>
                 </div>
 
                 <p id="formMessage" class="form-message" aria-live="polite"></p>
@@ -228,37 +230,34 @@
 </section>
 
 <section id="contact" class="contact">
-    <h2 data-i18n="contactTitle">Napisz do nas!</h2>
-    <p class="subtitle" data-i18n="contactSubtitle">I weź swój samochód!</p>
+    <div class="container">
+        <h2 data-i18n="contactTitle">Napisz do nas!</h2>
+        <p class="subtitle" data-i18n="contactSubtitle">I weź swój samochód!</p>
 
-    <div class="contact-grid">
-        <div>
-            <p>AUTOAGENCY Sp. z o.o.</p>
-            <p>TAX: PL5223315571</p>
-            <p>REGON: 540018737</p>
-            <p>KRS: 0001134992</p>
-            <p>EORI: PL522331557100000</p>
+        <div class="contact-grid">
+            <div>
+                <p>AUTOAGENCY Sp. z o.o.</p>
+                <p>TAX: PL5223315571</p>
+                <p>REGON: 540018737</p>
+                <p>KRS: 0001134992</p>
+                <p>EORI: PL522331557100000</p>
+            </div>
+
+            <div>
+                <p>📧 <a href="mailto:autoagency.pl@gmail.com">autoagency.pl@gmail.com</a></p>
+                <p>📍 Łopuszańska 24C<br>02-220 Warszawa</p>
+                <p>📞 <a href="tel:+48451675575">WhatsApp, Viber<br>+48 451 675 575</a></p>
+            </div>
         </div>
 
-        <div>
-            <p>📧 <a href="mailto:autoagency.pl@gmail.com">autoagency.pl@gmail.com</a></p>
-            <p>📍 Łopuszańska 24C<br>02-220 Warszawa</p>
-            <p>📞 <a href="tel:+48451675575">WhatsApp, Viber<br>+48 451 675 575</a></p>
-        </div>
+        <iframe title="Auto Agency location" loading="lazy"
+            src="https://maps.google.com/maps?q=Łopuszańska%2024C%20Warszawa&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
     </div>
-
-    <iframe
-        title="Auto Agency location"
-        loading="lazy"
-        src="https://maps.google.com/maps?q=Łopuszańska%2024C%20Warszawa&t=&z=13&ie=UTF8&iwloc=&output=embed">
-    </iframe>
 </section>
 
 </main>
 
-<footer>
-    © 2026 Auto Agency
-</footer>
+<footer>© 2026 Auto Agency</footer>
 
 <script src="script.js"></script>
 </body>
