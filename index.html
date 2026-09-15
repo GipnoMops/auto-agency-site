@@ -3,125 +3,235 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Auto Agency — import samochodów z USA. Znajdziemy, kupimy i dostarczymy Twój samochód.">
 <title>Auto Agency</title>
 
 <link rel="icon" type="image/png" href="images/favicon.png">
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="header">
-    <div class="logo">
-        <img src="images/logo.png" alt="logo">
+    <a class="logo" href="#top" aria-label="Auto Agency">
+        <img src="images/logo.png" alt="Auto Agency logo">
         <span>AUTO AGENCY</span>
-    </div>
+    </a>
 
-    <nav>
-        <a href="#why">Dlaczego my</a>
-        <a href="#cars">Samochody</a>
-        <a href="#contact">Kontakt</a>
-        <a class="phone" href="tel:+48451675575">Zadzwoń Teraz +48-451-675-575</a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menu">☰</button>
+
+    <nav id="mainNav">
+        <a href="#why" data-i18n="navWhy">Dlaczego my</a>
+        <a href="#configurator" data-i18n="navConfigurator">Skonfiguruj auto</a>
+        <a href="#contact" data-i18n="navContact">Kontakt</a>
+        <a class="phone" href="tel:+48451675575">+48 451 675 575</a>
+
+        <div class="language-switcher" aria-label="Language">
+            <button type="button" class="lang-btn active" data-lang="pl">PL</button>
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        </div>
     </nav>
 </header>
 
+<main id="top">
+
 <section class="hero">
     <div class="hero-content">
-        <h1>Import samochodów z USA</h1>
-        <p>Pomagamy znaleźć i dostarczyć Twój wymarzony samochód</p>
+        <h1 data-i18n="heroTitle">Import samochodów z USA</h1>
+        <p data-i18n="heroText">Pomagamy znaleźć i dostarczyć Twój wymarzony samochód</p>
+        <a class="hero-button" href="#configurator" data-i18n="heroButton">Skonfiguruj swój samochód</a>
     </div>
 </section>
 
-
 <section class="about">
-    <p>
+    <p data-i18n="about">
         Kompleksowa obsługa importu samochodów. Wybór, transport,
         dokumenty i dostawa pod dom klienta.
     </p>
 </section>
 
-
 <section id="why" class="why">
-    <h2>Dlaczego Auto Agency?</h2>
+    <h2 data-i18n="whyTitle">Dlaczego Auto Agency?</h2>
 
     <div class="why-grid">
-
         <div class="why-card">
             <h3>01</h3>
-            <h4>Wybieramy samochód, który chcesz</h4>
-            <p>
-            Określasz żądany sprzęt i budżet pojazdu (samochodu lub ciężarówki)
-            - znajdziemy odpowiedni pojazd zgodnie z twoją prośbą.
-            </p>
+            <h4 data-i18n="why1Title">Wybieramy samochód, który chcesz</h4>
+            <p data-i18n="why1Text">Określasz wymagania i budżet pojazdu — znajdziemy odpowiedni samochód zgodnie z Twoimi oczekiwaniami.</p>
         </div>
 
         <div class="why-card">
             <h3>02</h3>
-            <h4>Podpisujemy umowę, Depozyt</h4>
-            <p>
-            Zawieramy umowę na przeszukanie i zakup samochodu w Europie.
-            Depozyt jest zwracany w całości, jeśli samochód nie został zakupiony.
-            </p>
+            <h4 data-i18n="why2Title">Podpisujemy umowę, depozyt</h4>
+            <p data-i18n="why2Text">Zawieramy umowę na wyszukanie i zakup samochodu. Depozyt jest zwracany w całości, jeśli samochód nie zostanie zakupiony.</p>
         </div>
 
         <div class="why-card">
             <h3>03</h3>
-            <h4>Transportujemy twój samochód</h4>
-            <p>
-            Organizujemy dostawę samochodu na nasz parking w Warszawie.
-            Samochód jest ubezpieczony na wszystkie podróże.
-            </p>
+            <h4 data-i18n="why3Title">Transportujemy Twój samochód</h4>
+            <p data-i18n="why3Text">Organizujemy dostawę samochodu do Polski. Samochód jest ubezpieczony podczas transportu.</p>
         </div>
 
         <div class="why-card">
             <h3>04</h3>
-            <h4>Podnosisz samochód i dokumenty</h4>
-            <p>
-            Gdy wszystkie dokumenty będą gotowe, odbierzesz nowy samochód
-            albo dostarczymy go pod dom.
-            </p>
+            <h4 data-i18n="why4Title">Odbierasz samochód i dokumenty</h4>
+            <p data-i18n="why4Text">Gdy wszystkie dokumenty będą gotowe, odbierzesz samochód albo dostarczymy go pod Twój dom.</p>
         </div>
 
         <div class="why-card">
             <h3>05</h3>
-            <h4>Eksport</h4>
-            <p>
-            Zapewniamy pełen zakres usług organizacji eksportu samochodów
-            poza UE.
-            </p>
+            <h4 data-i18n="why5Title">Eksport</h4>
+            <p data-i18n="why5Text">Zapewniamy pełen zakres usług związanych z organizacją eksportu samochodów poza UE.</p>
         </div>
-
     </div>
 </section>
 
-<!--
-<section id="cars" class="cars">
-    <h2>Przykładowe auta</h2>
-
-    <div class="cars-grid">
-
-        <div class="car">
-            <img src="images/car1.jpg">
-            <h3>Tesla Model Y</h3>
+<section id="configurator" class="configurator">
+    <div class="configurator-inner">
+        <div class="section-heading">
+            <span class="eyebrow" data-i18n="configEyebrow">DOBÓR SAMOCHODU</span>
+            <h2 data-i18n="configTitle">Skonfiguruj swoje auto</h2>
+            <p data-i18n="configIntro">Podaj swoje wymagania, a my znajdziemy samochód odpowiadający Twoim oczekiwaniom.</p>
         </div>
 
-        <div class="car">
-            <img src="images/car2.jpg">
-            <h3>Ford Mustang</h3>
-        </div>
+        <form id="carForm">
+            <div class="form-grid">
+                <div class="field">
+                    <label for="brand" data-i18n="brand">Marka</label>
+                    <select id="brand" name="brand">
+                        <option value="" data-i18n="choose">Wybierz</option>
+                        <option>Audi</option>
+                        <option>BMW</option>
+                        <option>Ford</option>
+                        <option>Mercedes-Benz</option>
+                        <option>Porsche</option>
+                        <option>Tesla</option>
+                        <option>Toyota</option>
+                        <option>Volkswagen</option>
+                        <option>Volvo</option>
+                        <option data-i18n="other">Inna</option>
+                    </select>
+                </div>
 
+                <div class="field">
+                    <label for="model" data-i18n="model">Model</label>
+                    <input id="model" name="model" type="text" data-placeholder="modelPlaceholder" placeholder="np. X5, Mustang, Model Y">
+                </div>
+
+                <div class="field">
+                    <label for="yearFrom" data-i18n="year">Rok produkcji</label>
+                    <div class="range-fields">
+                        <select id="yearFrom" name="yearFrom"></select>
+                        <span>—</span>
+                        <select id="yearTo" name="yearTo"></select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="mileage" data-i18n="mileage">Przebieg maksymalny</label>
+                    <select id="mileage" name="mileage">
+                        <option value="" data-i18n="noPreference">Bez znaczenia</option>
+                        <option value="50000">50 000 km</option>
+                        <option value="100000">100 000 km</option>
+                        <option value="150000">150 000 km</option>
+                        <option value="200000">200 000 km</option>
+                    </select>
+                </div>
+
+                <fieldset class="field choice-field">
+                    <legend data-i18n="transmission">Skrzynia biegów</legend>
+                    <div class="choices">
+                        <label><input type="radio" name="transmission" value="Manual"><span data-i18n="manual">Manualna</span></label>
+                        <label><input type="radio" name="transmission" value="Automatic"><span data-i18n="automatic">Automatyczna</span></label>
+                        <label><input type="radio" name="transmission" value="Any" checked><span data-i18n="noPreference">Bez znaczenia</span></label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="field choice-field">
+                    <legend data-i18n="fuel">Rodzaj paliwa</legend>
+                    <div class="choices">
+                        <label><input type="radio" name="fuel" value="Petrol"><span data-i18n="petrol">Benzyna</span></label>
+                        <label><input type="radio" name="fuel" value="Diesel"><span data-i18n="diesel">Diesel</span></label>
+                        <label><input type="radio" name="fuel" value="Hybrid"><span data-i18n="hybrid">Hybryda</span></label>
+                        <label><input type="radio" name="fuel" value="Electric"><span data-i18n="electric">Elektryczny</span></label>
+                        <label><input type="radio" name="fuel" value="Any" checked><span data-i18n="noPreference">Bez znaczenia</span></label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="field choice-field full-width">
+                    <legend data-i18n="body">Nadwozie</legend>
+                    <div class="choices">
+                        <label><input type="radio" name="body" value="Sedan"><span>Sedan</span></label>
+                        <label><input type="radio" name="body" value="Wagon"><span data-i18n="wagon">Kombi</span></label>
+                        <label><input type="radio" name="body" value="SUV"><span>SUV</span></label>
+                        <label><input type="radio" name="body" value="Hatchback"><span>Hatchback</span></label>
+                        <label><input type="radio" name="body" value="Coupe"><span>Coupe</span></label>
+                        <label><input type="radio" name="body" value="Convertible"><span data-i18n="convertible">Kabriolet</span></label>
+                        <label><input type="radio" name="body" value="Any" checked><span data-i18n="noPreference">Bez znaczenia</span></label>
+                    </div>
+                </fieldset>
+
+                <div class="field">
+                    <label for="budget" data-i18n="budget">Budżet</label>
+                    <select id="budget" name="budget">
+                        <option value="" data-i18n="budgetAny">Bez określonego limitu</option>
+                        <option>do 10 000 €</option>
+                        <option>10 000–20 000 €</option>
+                        <option>20 000–30 000 €</option>
+                        <option>30 000–40 000 €</option>
+                        <option>40 000–50 000 €</option>
+                        <option>powyżej 50 000 €</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="contactName" data-i18n="name">Imię</label>
+                    <input id="contactName" name="name" type="text" data-placeholder="namePlaceholder" placeholder="Twoje imię">
+                </div>
+
+                <div class="field">
+                    <label for="contactPhone" data-i18n="phone">Numer telefonu</label>
+                    <input id="contactPhone" name="phone" type="tel" placeholder="+48 ...">
+                </div>
+
+                <div class="field">
+                    <label for="contactEmail" data-i18n="email">Adres e-mail</label>
+                    <input id="contactEmail" name="email" type="email" placeholder="example@email.com">
+                </div>
+
+                <div class="field full-width">
+                    <label for="requirements" data-i18n="requirements">Dodatkowe wymagania</label>
+                    <textarea id="requirements" name="requirements" rows="5" data-placeholder="requirementsPlaceholder" placeholder="Kolor, napęd, wyposażenie, preferowany rynek zakupu itd."></textarea>
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <p class="privacy-note" data-i18n="privacy">
+                    Podając dane kontaktowe, zgadzasz się na kontakt w sprawie zapytania.
+                </p>
+
+                <div class="submit-buttons">
+                    <button class="submit-button whatsapp-button" type="button" id="whatsappButton">
+                        <span>WhatsApp</span>
+                    </button>
+                    <button class="submit-button email-button" type="submit">
+                        <span data-i18n="sendEmail">Wyślij e-mail</span>
+                    </button>
+                </div>
+
+                <p id="formMessage" class="form-message" aria-live="polite"></p>
+            </div>
+        </form>
     </div>
 </section>
--->
 
 <section id="contact" class="contact">
-    <h2>Napisz do nas!</h2>
-    <p class="subtitle">I weź swój samochód!</p>
+    <h2 data-i18n="contactTitle">Napisz do nas!</h2>
+    <p class="subtitle" data-i18n="contactSubtitle">I weź swój samochód!</p>
 
     <div class="contact-grid">
-
         <div>
             <p>AUTOAGENCY Sp. z o.o.</p>
             <p>TAX: PL5223315571</p>
@@ -131,23 +241,25 @@
         </div>
 
         <div>
-            <p>📧 autoagency.pl@gmail.com</p>
+            <p>📧 <a href="mailto:autoagency.pl@gmail.com">autoagency.pl@gmail.com</a></p>
             <p>📍 Łopuszańska 24C<br>02-220 Warszawa</p>
-            <p>📞 WhatsApp, Viber<br>+48 451 675 575</p>
+            <p>📞 <a href="tel:+48451675575">WhatsApp, Viber<br>+48 451 675 575</a></p>
         </div>
-
     </div>
 
     <iframe
+        title="Auto Agency location"
+        loading="lazy"
         src="https://maps.google.com/maps?q=Łopuszańska%2024C%20Warszawa&t=&z=13&ie=UTF8&iwloc=&output=embed">
     </iframe>
-
 </section>
 
+</main>
 
 <footer>
     © 2026 Auto Agency
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
