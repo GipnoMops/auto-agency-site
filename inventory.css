@@ -74,20 +74,6 @@
   transform: scale(1.035);
 }
 
-.inventory-demo-label {
-  position: absolute;
-  top: 13px;
-  left: 13px;
-  padding: 7px 9px;
-  color: #fff;
-  background: rgba(22, 25, 20, .78);
-  font-size: .62rem;
-  font-weight: 700;
-  letter-spacing: .09em;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
 .inventory-card-content {
   display: flex;
   flex: 1;
@@ -155,54 +141,12 @@
   overflow-wrap: anywhere;
 }
 
-.inventory-card-button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  width: 100%;
-  min-height: 48px;
-  margin-top: auto;
-  padding: 13px 15px;
-  border: 1px solid #697455;
-  border-radius: 2px;
-  color: #fff;
-  background: #697455;
-  font: inherit;
-  font-size: .84rem;
-  font-weight: 700;
-  text-align: left;
-  cursor: pointer;
-  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
-}
-
-.inventory-card-button:hover,
-.inventory-card-button:focus-visible {
-  border-color: #252920;
-  background: #252920;
-}
-
-.inventory-card-button:focus-visible,
-.inventory-arrow:focus-visible,
-.inventory-dot:focus-visible {
-  outline: 2px solid #343a2b;
-  outline-offset: 3px;
-}
-
 .inventory-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
   margin-top: 22px;
-}
-
-.inventory-note {
-  max-width: 620px;
-  margin: 0;
-  color: #6d7166;
-  font-size: .78rem;
-  line-height: 1.6;
 }
 
 .inventory-controls {
@@ -282,7 +226,114 @@
 @media (prefers-reduced-motion: reduce) {
   .inventory-track,
   .inventory-card-media img,
-  .inventory-card-button,
   .inventory-arrow,
   .inventory-dot { transition: none; }
+}
+
+/* Refined accents and header logo. Loaded after style.css, so these are intentional overrides. */
+:root {
+  --aa-accent: #74884f;
+  --aa-accent-dark: #596b39;
+}
+
+.inventory .section-top {
+  display: block;
+}
+
+.inventory h2 em {
+  color: var(--aa-accent);
+}
+
+.inventory-bottom {
+  justify-content: flex-end;
+}
+
+.inventory-spec-label {
+  color: #747b65;
+}
+
+.inventory-arrow:hover:not(:disabled) {
+  border-color: var(--aa-accent);
+  background: var(--aa-accent);
+}
+
+.inventory-dot[aria-current="true"] {
+  background: var(--aa-accent);
+}
+
+/* Slightly brighter green throughout the existing site. */
+.eyebrow-line,
+.intro-stamp,
+.btn-accent,
+.btn-whatsapp,
+.btn-telegram,
+.btn-form,
+.btn-dark,
+.process-footer .text-link,
+.export-points li > span:first-child,
+.configurator-promise .promise-check,
+.map-link:hover,
+.back-top:hover,
+.lang-btn.active {
+  --site-accent: var(--aa-accent);
+}
+
+.eyebrow-line {
+  background-color: var(--aa-accent) !important;
+}
+
+.btn-accent {
+  background-color: var(--aa-accent) !important;
+  border-color: var(--aa-accent) !important;
+}
+
+.btn-accent:hover,
+.btn-accent:focus-visible {
+  background-color: var(--aa-accent-dark) !important;
+  border-color: var(--aa-accent-dark) !important;
+}
+
+h2 em,
+.section-top h2 em {
+  color: var(--aa-accent) !important;
+}
+
+.intro-stamp {
+  border-color: var(--aa-accent) !important;
+}
+
+.site-header .brand-logo {
+  width: clamp(132px, 12vw, 158px) !important;
+  height: auto !important;
+  filter: brightness(1.08) contrast(1.16) drop-shadow(0 1px 1px rgba(0, 0, 0, .28));
+}
+
+.site-header .brand {
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .site-header .brand-logo {
+    width: 132px !important;
+  }
+}
+
+/* Use the brighter accent on a few additional existing UI details. */
+.intro-stamp span,
+.card-index,
+.step-number,
+.form-heading > span,
+.meeting-index,
+.meeting-icon,
+.meeting-foot,
+.configurator-promise .promise-check,
+.export-points li > span:first-child,
+.language-switcher .lang-btn.active,
+.footer-languages button.active {
+  color: var(--aa-accent) !important;
+}
+
+.language-switcher .lang-btn.active,
+.footer-languages button.active {
+  border-color: var(--aa-accent) !important;
 }

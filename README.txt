@@ -1,13 +1,22 @@
-AUTOAGENCY — inventory section update
+AUTOAGENCY — обновление блока «Автомобили в наличии»
 
-Files:
-- index.html: current page with the inventory navigation link and section inserted between the configurator and contact sections. It loads inventory.css and inventory.js.
-- inventory.css: additive styles for the vehicle cards and responsive carousel.
-- inventory.js: seven illustrative vehicle cards, Polish/English/Russian text, carousel controls, and a button that fills the existing vehicle enquiry form.
+В комплекте:
+- index.html — удалены два поясняющих текста из блока наличия.
+- inventory.css — удалены стили метки «Пример» и кнопки карточки; немного осветлён зелёный акцент, увеличен и слегка усилен контраст логотипа в верхней панели.
+- inventory.js — шесть автомобилей из ранее обсуждавшейся подборки, без цен, без меток-примеров и без кнопок запроса. Характеристики переведены на польский, английский и русский вместе с сайтом.
 
-Important:
-- No prices are displayed.
-- The seven cards are explicitly labelled as examples. Replace their data and images in the `cars` array in inventory.js with verified real stock before publishing them as actual available cars.
-- Keep inventory.css and inventory.js in the same folder as index.html and the existing style.css/script.js.
-- Existing style.css and script.js are not overwritten. The new layer is loaded after them.
-- Vehicle images are loaded from Unsplash URLs; for production, preferably download licensed/owned photos into the site's images folder and replace each `image` URL.
+Установка:
+1. Сделайте резервную копию текущих файлов.
+2. Замените index.html, inventory.css и inventory.js файлами из архива.
+3. Оставьте существующие style.css, script.js и папку images/ на месте.
+4. Обновите страницу с очисткой кэша (Ctrl+F5).
+
+Источники фотографий (прямые ссылки на изображения подключены в inventory.js):
+- BMW 320d: https://www.njuskalo.hr/auti/bmw-serija-3-320d-oglas-41010402
+- Audi A6: https://auto.ru/cars/used/sale/audi/a6/1124813415-e86f1032/
+- Volkswagen Passat Variant: https://www.njuskalo.hr/auti/vw-passat-variant-2.0-tdi-dsg-full-led-kamera-ambi-light-garanc-oglas-45203361
+- Volvo XC60: https://autosportsgroup.com.au/c9931-1799384-volvo-xc60-2021/
+- Toyota RAV4: https://jammer.ie/vehicle/785469-toyota-rav4-2021
+- Mercedes-Benz E-Class: https://www.njuskalo.hr/auti/mercedes-benz-e-klasa-220-d-oglas-38432386
+
+Важно: фотографии размещены на сторонних сайтах объявлений и подключаются напрямую. Перед коммерческой публикацией проверьте условия повторного использования фотографий; владельцы сайтов могут менять адреса или блокировать внешнюю загрузку. Пробег и часть характеристик карточек перенесены из ранее обсуждавшейся подборки, их следует сверить с фактическими автомобилями перед публикацией.
