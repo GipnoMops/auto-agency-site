@@ -1,264 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Auto Agency — import samochodów z USA.">
-<title>Auto Agency</title>
-
-<link rel="icon" type="image/png" href="images/favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151714">
+  <meta name="description" content="AutoAgency — kompleksowa obsługa zakupu samochodów w Europie, dostawy i formalności w Polsce oraz eksportu poza UE.">
+  <meta property="og:title" content="AutoAgency — samochody z Europy">
+  <meta property="og:description" content="Wybór samochodu na europejskich aukcjach leasingowych i u dealerów. Zakup, dostawa i formalności w jednym miejscu.">
+  <meta property="og:type" content="website">
+  <title>AutoAgency — samochody z Europy</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="inventory.css">
 </head>
-
 <body>
-
-<header class="header">
-    <a class="logo" href="#top" aria-label="Auto Agency">
-        <img src="images/logo.png" alt="Auto Agency logo">
-        <span>AUTO AGENCY</span>
-    </a>
-
-    <nav id="mainNav">
-        <a href="#why" data-i18n="navWhy">Dlaczego my</a>
-        <a href="#configurator" data-i18n="navConfigurator">Podobierz auto</a>
-        <a href="#contact" data-i18n="navContact">Kontakty</a>
-        <a class="phone" href="tel:+48451675575">+48 451 675 575</a>
-        <div class="language-switcher" aria-label="Language">
-            <button type="button" class="lang-btn active" data-lang="pl">PL</button>
-            <button type="button" class="lang-btn" data-lang="en">EN</button>
-            <button type="button" class="lang-btn" data-lang="ru">RU</button>
-        </div>
+  <div class="announcement"><span class="announcement-dot"></span><span data-i18n="topline">Samochody z europejskich aukcji i od dealerów — kompleksowa obsługa w Polsce</span></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="AutoAgency — strona główna"><img class="brand-logo" src="images/logo.png" alt="AutoAgency"></a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#process" data-i18n="navProcess">Jak to działa</a>
+      <a href="#services" data-i18n="navServices">Usługi</a>
+      <a href="#configurator" data-i18n="navConfigurator">Dobór auta</a>
+      <a href="#inventory" data-i18n="inventoryNav">Samochody w ofercie</a>
+      <a href="#contact" data-i18n="navContact">Kontakt</a>
+      <a class="nav-phone" href="tel:+48451675575">+48 451 675 575</a>
+      <div class="language-switcher" aria-label="Language selector">
+        <button type="button" class="lang-btn active" data-lang="pl" aria-pressed="true">PL</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
+      </div>
     </nav>
+  </header>
 
-    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
-</header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-image" role="img" aria-label="Premium car in a modern European setting"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content wrap">
+        <div class="eyebrow light"><span class="eyebrow-line"></span><span data-i18n="heroEyebrow">EUROPEAN CAR SOURCING</span></div>
+        <h1 data-i18n="heroTitle">Twój samochód.<br><em>Nasza odpowiedzialność.</em></h1>
+        <p class="hero-lead" data-i18n="heroText">Pomagamy kupić samochód w Europie — od wyszukania odpowiedniej oferty na aukcji leasingowej lub u dealera po dostawę i formalności w Polsce.</p>
+        <div class="hero-actions"><a class="btn btn-accent" href="#configurator"><span data-i18n="heroButton">Znajdźmy Twój samochód</span><span class="btn-arrow">↗</span></a><a class="text-link light-link" href="#process"><span data-i18n="heroSecondary">Zobacz, jak działamy</span><span>↓</span></a></div>
+        <div class="hero-note"><span class="note-icon">↗</span><span data-i18n="heroNote">Dla klientów prywatnych, agentów i dealerów</span></div>
+      </div>
+      <div class="hero-bottom wrap"><span>01 / 08</span><span class="hero-bottom-rule"></span><span data-i18n="heroBottom">OD WYBORU DO REJESTRACJI</span></div>
+    </section>
 
-<main id="top">
+    <section class="intro-band">
+      <div class="wrap intro-grid">
+        <p class="intro-kicker" data-i18n="introKicker">MĄDRY ZAKUP<br>BEZ CHAOSU</p>
+        <p class="intro-copy" data-i18n="introText">Łączymy dostęp do europejskich ofert z praktyczną obsługą zakupu, transportu i dokumentów. Ty określasz potrzeby — my pomagamy przejść przez kolejne etapy.</p>
+        <div class="intro-stamp"><span>AA</span><small data-i18n="introStamp">PARTNER W ZAKUPIE</small></div>
+      </div>
+    </section>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1 data-i18n="heroTitle">Import samochodów z USA</h1>
-        <p data-i18n="heroText">Pomagamy znaleźć i dostarczyć Twój wymarzony samochód</p>
-        <a class="hero-button" href="#configurator" data-i18n="heroButton">Podobierz swój samochód</a>
-    </div>
-</section>
-
-<section class="about">
-    <p data-i18n="about">Kompleksowa obsługa importu samochodów. Wybór, transport, dokumenty i dostawa pod dom klienta.</p>
-</section>
-
-<section id="why" class="why">
-    <div class="container">
-        <h2 data-i18n="whyTitle">Dlaczego Auto Agency?</h2>
-
-        <div class="why-grid">
-            <article class="why-card">
-                <span class="card-number">01</span>
-                <h3 data-i18n="why1Title">Wybieramy samochód, który chcesz</h3>
-                <p data-i18n="why1Text">Określasz wymagania i budżet pojazdu — znajdziemy odpowiedni samochód zgodnie z Twoimi oczekiwaniami.</p>
-            </article>
-
-            <article class="why-card">
-                <span class="card-number">02</span>
-                <h3 data-i18n="why2Title">Podpisujemy umowę, depozyt</h3>
-                <p data-i18n="why2Text">Zawieramy umowę na wyszukanie i zakup samochodu. Depozyt jest zwracany w całości, jeśli samochód nie zostanie zakupiony.</p>
-            </article>
-
-            <article class="why-card">
-                <span class="card-number">03</span>
-                <h3 data-i18n="why3Title">Transportujemy Twój samochód</h3>
-                <p data-i18n="why3Text">Organizujemy dostawę samochodu do Polski. Samochód jest ubezpieczony podczas transportu.</p>
-            </article>
-
-            <article class="why-card">
-                <span class="card-number">04</span>
-                <h3 data-i18n="why4Title">Odbierasz samochód i dokumenty</h3>
-                <p data-i18n="why4Text">Gdy wszystkie dokumenty będą gotowe, odbierzesz samochód albo dostarczymy go pod Twój dom.</p>
-            </article>
-
-            <article class="why-card">
-                <span class="card-number">05</span>
-                <h3 data-i18n="why5Title">Eksport</h3>
-                <p data-i18n="why5Text">Zapewniamy pełen zakres usług związanych z organizacją eksportu samochodów poza UE.</p>
-            </article>
+    <section class="audiences section-pad" id="audiences">
+      <div class="wrap">
+        <div class="section-top"><div><div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="audienceEyebrow">DLA KOGO PRACUJEMY</span></div><h2 data-i18n="audienceTitle">Dwa modele współpracy.<br><em>Jeden partner.</em></h2></div><p class="section-aside" data-i18n="audienceIntro">Niezależnie od tego, czy szukasz auta dla siebie, czy rozwijasz działalność handlową — dopasujemy proces do Twoich potrzeb.</p></div>
+        <div class="audience-grid">
+          <article class="audience-card audience-private"><div class="audience-image"></div><div class="audience-card-content"><span class="card-index">01 / PRIVATE</span><h3 data-i18n="privateTitle">Dla klientów prywatnych</h3><p data-i18n="privateText">Pomagamy znaleźć samochód odpowiadający Twoim oczekiwaniom i budżetowi, a następnie przejść przez zakup, dostawę oraz formalności.</p><a class="arrow-link" href="#configurator"><span data-i18n="privateLink">Opowiedz nam, czego szukasz</span><b>↗</b></a></div></article>
+          <article class="audience-card audience-business"><div class="audience-image"></div><div class="audience-card-content"><span class="card-index">02 / BUSINESS</span><h3 data-i18n="businessTitle">Dla agentów i dealerów</h3><p data-i18n="businessText">Wspieramy partnerów handlowych w wyszukiwaniu ofert na europejskich aukcjach leasingowych i u dealerów oraz w organizacji kolejnych etapów transakcji.</p><a class="arrow-link" href="#configurator"><span data-i18n="businessLink">Porozmawiajmy o współpracy</span><b>↗</b></a></div></article>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section id="configurator" class="configurator">
-    <div class="configurator-card">
-        <div class="section-heading">
-            <span class="eyebrow" data-i18n="configEyebrow">DOBÓR SAMOCHODU</span>
-            <h2 data-i18n="configTitle">Podobierz swoje auto</h2>
-            <p data-i18n="configIntro">Podaj swoje wymagania, a my znajdziemy samochód odpowiadający Twoim oczekiwaniom.</p>
+    <section class="services section-pad" id="services">
+      <div class="wrap">
+        <div class="section-top"><div><div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="servicesEyebrow">OBSŁUGA W JEDNYM MIEJSCU</span></div><h2 data-i18n="servicesTitle">Więcej niż<br><em>sam zakup auta.</em></h2></div><p class="section-aside" data-i18n="servicesIntro">Organizujemy proces od wyszukania odpowiedniego samochodu aż po dokumenty i odbiór. Zakres ustalamy dla konkretnej transakcji.</p></div>
+        <div class="services-layout">
+          <div class="services-photo"><div class="photo-caption"><span data-i18n="photoCaption">EUROPEAN SOURCING</span><span>01 — 06</span></div></div>
+          <div class="service-list">
+            <article class="service-item"><span class="service-num">01</span><div><h3 data-i18n="service1Title">Wyszukiwanie ofert</h3><p data-i18n="service1Text">Europejskie aukcje leasingowe i oferty dealerów — zgodnie z Twoimi kryteriami.</p></div><span class="service-symbol">↗</span></article>
+            <article class="service-item"><span class="service-num">02</span><div><h3 data-i18n="service2Title">Zakup i dokumenty</h3><p data-i18n="service2Text">Wsparcie na etapie zakupu oraz przygotowania dokumentacji transakcji.</p></div><span class="service-symbol">↗</span></article>
+            <article class="service-item"><span class="service-num">03</span><div><h3 data-i18n="service3Title">Podatki i rozliczenia</h3><p data-i18n="service3Text">Obsługa formalności związanych z akcyzą i VAT, odpowiednio do warunków transakcji.</p></div><span class="service-symbol">↗</span></article>
+            <article class="service-item"><span class="service-num">04</span><div><h3 data-i18n="service4Title">Dostawa do Polski</h3><p data-i18n="service4Text">Organizacja transportu samochodu do biura w Polsce.</p></div><span class="service-symbol">↗</span></article>
+            <article class="service-item"><span class="service-num">05</span><div><h3 data-i18n="service5Title">Tłumaczenia i przegląd</h3><p data-i18n="service5Text">Tłumaczenie przysięgłe dokumentów i organizacja badania technicznego.</p></div><span class="service-symbol">↗</span></article>
+            <article class="service-item"><span class="service-num">06</span><div><h3 data-i18n="service6Title">Rejestracja i tablice</h3><p data-i18n="service6Text">Pomoc w rejestracji pojazdu i uzyskaniu tablic rejestracyjnych.</p></div><span class="service-symbol">↗</span></article>
+          </div>
         </div>
+        <div class="tax-note"><span class="tax-note-mark">i</span><p data-i18n="taxNote">W zależności od rodzaju transakcji możliwe jest wystawienie faktury VAT 23% dla podmiotów gospodarczych. Warunki podatkowe i ewentualne zwolnienia dla klientów prywatnych potwierdzamy dla konkretnego zakupu.</p></div>
+      </div>
+    </section>
 
-        <form id="carForm">
-            <div class="form-section">
-                <h3 data-i18n="carDetails">Samochód</h3>
+    <section class="process section-pad" id="process">
+      <div class="wrap">
+        <div class="section-top process-top"><div><div class="eyebrow light"><span class="eyebrow-line"></span><span data-i18n="processEyebrow">PROSTY PROCES</span></div><h2 data-i18n="processTitle">Od pierwszej rozmowy<br><em>do odbioru samochodu.</em></h2></div><p class="section-aside light-aside" data-i18n="processIntro">Jasne etapy współpracy pomagają wiedzieć, co dzieje się na każdym kroku.</p></div>
+        <div class="process-steps">
+          <article class="process-step"><span class="step-number">01</span><div class="step-icon">⌕</div><h3 data-i18n="step1Title">Rozmawiamy o potrzebach</h3><p data-i18n="step1Text">Ustalamy parametry samochodu, budżet i oczekiwania.</p></article>
+          <article class="process-step"><span class="step-number">02</span><div class="step-icon">▤</div><h3 data-i18n="step2Title">Szukamy ofert</h3><p data-i18n="step2Text">Analizujemy dostępne samochody na aukcjach i u dealerów.</p></article>
+          <article class="process-step"><span class="step-number">03</span><div class="step-icon">↗</div><h3 data-i18n="step3Title">Organizujemy zakup</h3><p data-i18n="step3Text">Po uzgodnieniu oferty przechodzimy do zakupu i dokumentów.</p></article>
+          <article class="process-step"><span class="step-number">04</span><div class="step-icon">⇢</div><h3 data-i18n="step4Title">Dostarczamy auto</h3><p data-i18n="step4Text">Organizujemy transport do Polski i kolejne formalności.</p></article>
+          <article class="process-step"><span class="step-number">05</span><div class="step-icon">✓</div><h3 data-i18n="step5Title">Przekazujemy samochód</h3><p data-i18n="step5Text">Odbierasz samochód i przygotowane dokumenty.</p></article>
+        </div>
+        <div class="process-footer"><span data-i18n="processFooter">Masz już konkretny samochód na oku?</span><a href="#configurator" class="text-link light-link"><span data-i18n="processLink">Wyślij nam ofertę lub wymagania</span><span>↗</span></a></div>
+      </div>
+    </section>
 
-                <div class="form-grid">
-                    <div class="field">
-                        <label for="brand" data-i18n="brand">Marka</label>
-                        <select id="brand" name="brand">
-                            <option value="" data-i18n="choose">Wybierz</option>
-                            <option>Audi</option>
-                            <option>BMW</option>
-                            <option>Ford</option>
-                            <option>Mercedes-Benz</option>
-                            <option>Porsche</option>
-                            <option>Tesla</option>
-                            <option>Toyota</option>
-                            <option>Volkswagen</option>
-                            <option>Volvo</option>
-                            <option data-i18n="other">Inna</option>
-                        </select>
-                    </div>
+    <section class="export section-pad" id="export">
+      <div class="wrap export-grid"><div class="export-visual"><div class="export-photo"></div><div class="export-label"><span>EX</span><span data-i18n="exportLabel">EXPORT SUPPORT</span></div></div><div class="export-copy"><div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="exportEyebrow">POZA UNIĄ EUROPEJSKĄ</span></div><h2 data-i18n="exportTitle">Zakup w Europie.<br><em>Eksport dalej.</em></h2><p data-i18n="exportText">Organizujemy obsługę eksportu samochodów poza UE do krajów, do których eksport jest możliwy. Zakres dokumentów i procedur zależy od kierunku oraz konkretnej transakcji.</p><ul class="export-points"><li><span>✓</span><span data-i18n="exportPoint1">Przygotowanie dokumentów eksportowych EX</span></li><li><span>✓</span><span data-i18n="exportPoint2">Wsparcie w organizacji tablic tranzytowych</span></li><li><span>✓</span><span data-i18n="exportPoint3">Ustalenie możliwości eksportu dla kraju docelowego</span></li></ul><a class="btn btn-dark" href="#configurator"><span data-i18n="exportButton">Zapytaj o eksport</span><span class="btn-arrow">↗</span></a></div></div>
+    </section>
 
-                    <div class="field">
-                        <label for="model" data-i18n="model">Model</label>
-                        <input id="model" name="model" type="text" data-placeholder="modelPlaceholder" placeholder="np. X5, Mustang, Model Y">
-                    </div>
+    <section class="meeting section-pad" id="meeting">
+      <div class="wrap"><div class="section-top"><div><div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="meetingEyebrow">JAK CI WYGODNIE</span></div><h2 data-i18n="meetingTitle">Spotkajmy się<br><em>na Twoich zasadach.</em></h2></div><p class="section-aside" data-i18n="meetingIntro">Współpracę możemy rozpocząć w sposób, który najlepiej pasuje do Twojego planu dnia.</p></div>
+        <div class="meeting-grid"><article class="meeting-card"><span class="meeting-index">01</span><div class="meeting-icon">⌂</div><h3 data-i18n="meeting1Title">W naszym biurze</h3><p data-i18n="meeting1Text">Zapraszamy do biura w Warszawie, gdzie możemy omówić szczegóły współpracy.</p><span class="meeting-foot" data-i18n="meeting1Foot">WARSZAWA, POLSKA</span></article><article class="meeting-card"><span class="meeting-index">02</span><div class="meeting-icon">⌖</div><h3 data-i18n="meeting2Title">W dogodnym miejscu</h3><p data-i18n="meeting2Text">Możemy uzgodnić spotkanie w innym, wygodnym dla Ciebie miejscu.</p><span class="meeting-foot" data-i18n="meeting2Foot">PO UZGODNIENIU</span></article><article class="meeting-card"><span class="meeting-index">03</span><div class="meeting-icon">↗</div><h3 data-i18n="meeting3Title">Zdalnie</h3><p data-i18n="meeting3Text">Porozmawiajmy telefonicznie lub online — bez konieczności dojazdu.</p><span class="meeting-foot" data-i18n="meeting3Foot">TELEFON / ONLINE</span></article></div>
+      </div>
+    </section>
 
-                    <div class="field">
-                        <label data-i18n="year">Rok produkcji</label>
-                        <div class="range-fields">
-                            <select id="yearFrom" name="yearFrom"></select>
-                            <span>—</span>
-                            <select id="yearTo" name="yearTo"></select>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label for="mileage" data-i18n="mileage">Przebieg maksymalny</label>
-                        <select id="mileage" name="mileage">
-                            <option value="" data-i18n="noPreference">Bez znaczenia</option>
-                            <option value="50000">50 000 km</option>
-                            <option value="100000">100 000 km</option>
-                            <option value="150000">150 000 km</option>
-                            <option value="200000">200 000 km</option>
-                        </select>
-                    </div>
-
-                    <fieldset class="field choice-field">
-                        <legend data-i18n="transmission">Skrzynia biegów</legend>
-                        <div class="choices">
-                            <label><input type="radio" name="transmission" value="Manual"><span data-i18n="manual">Manualna</span></label>
-                            <label><input type="radio" name="transmission" value="Automatic"><span data-i18n="automatic">Automatyczna</span></label>
-                            <label><input type="radio" name="transmission" value="Any" checked><span data-i18n="noPreference">Bez znaczenia</span></label>
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="field choice-field">
-                        <legend data-i18n="fuel">Rodzaj paliwa</legend>
-                        <div class="choices">
-                            <label><input type="radio" name="fuel" value="Petrol"><span data-i18n="petrol">Benzyna</span></label>
-                            <label><input type="radio" name="fuel" value="Diesel"><span data-i18n="diesel">Diesel</span></label>
-                            <label><input type="radio" name="fuel" value="Hybrid"><span data-i18n="hybrid">Hybryda</span></label>
-                            <label><input type="radio" name="fuel" value="Electric"><span data-i18n="electric">Elektryczny</span></label>
-                            <label><input type="radio" name="fuel" value="Any" checked><span data-i18n="noPreference">Bez znaczenia</span></label>
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="field choice-field full-width">
-                        <legend data-i18n="body">Nadwozie</legend>
-                        <div class="choices">
-                            <label><input type="radio" name="body" value="Sedan"><span>Sedan</span></label>
-                            <label><input type="radio" name="body" value="Wagon"><span data-i18n="wagon">Kombi</span></label>
-                            <label><input type="radio" name="body" value="SUV"><span>SUV</span></label>
-                            <label><input type="radio" name="body" value="Hatchback"><span>Hatchback</span></label>
-                            <label><input type="radio" name="body" value="Coupe"><span>Coupe</span></label>
-                            <label><input type="radio" name="body" value="Convertible"><span data-i18n="convertible">Kabriolet</span></label>
-                            <label><input type="radio" name="body" value="Any" checked><span data-i18n="noPreference">Bez znaczenia</span></label>
-                        </div>
-                    </fieldset>
-
-                    <div class="field">
-                        <label for="budget" data-i18n="budget">Budżet</label>
-                        <select id="budget" name="budget">
-                            <option value="" data-i18n="budgetAny">Bez określonego limitu</option>
-                            <option>do 10 000 €</option>
-                            <option>10 000–20 000 €</option>
-                            <option>20 000–30 000 €</option>
-                            <option>30 000–40 000 €</option>
-                            <option>40 000–50 000 €</option>
-                            <option>powyżej 50 000 €</option>
-                        </select>
-                    </div>
-                </div>
+    <section class="configurator section-pad" id="configurator">
+      <div class="wrap configurator-layout"><div class="configurator-copy"><div class="eyebrow light"><span class="eyebrow-line"></span><span data-i18n="formEyebrow">ZACZNIJMY OD ROZMOWY</span></div><h2 data-i18n="formTitle">Opowiedz nam<br><em>o swoim samochodzie.</em></h2><p data-i18n="formIntro">Wypełnij formularz, a przygotujemy się do rozmowy o Twoich oczekiwaniach. Im więcej szczegółów podasz, tym łatwiej będzie nam określić kolejny krok.</p><div class="configurator-promise"><span class="promise-check">✓</span><span data-i18n="formPromise">Bez zobowiązań — najpierw poznajmy Twoje potrzeby.</span></div><div class="configurator-contact"><span data-i18n="formPreferCall">Wolisz porozmawiać?</span><a href="tel:+48451675575">+48 451 675 575 ↗</a></div></div>
+        <div class="form-card"><form id="carForm" novalidate>
+          <div class="form-section"><div class="form-heading"><span>01</span><h3 data-i18n="formVehicleHeading">Samochód i budżet</h3></div>
+            <div class="form-grid">
+              <div class="field"><label for="clientType" data-i18n="clientType">Kim jesteś?</label><select id="clientType" name="clientType"><option value="private" data-i18n="clientPrivate">Klient prywatny</option><option value="business" data-i18n="clientBusiness">Agent / dealer</option></select></div>
+              <div class="field"><label for="destination" data-i18n="destination">Kraj docelowy</label><input id="destination" name="destination" type="text" data-placeholder="destinationPlaceholder" placeholder="Polska, Litwa, ..."></div>
+              <div class="field"><label for="brand" data-i18n="brand">Marka</label><select id="brand" name="brand"><option value="" data-i18n="choose">Wybierz</option><option>Audi</option><option>BMW</option><option>Ford</option><option>Mercedes-Benz</option><option>Porsche</option><option>Skoda</option><option>Tesla</option><option>Toyota</option><option>Volkswagen</option><option>Volvo</option><option value="other" data-i18n="other">Inna</option></select></div>
+              <div class="field"><label for="model" data-i18n="model">Model</label><input id="model" name="model" type="text" data-placeholder="modelPlaceholder" placeholder="np. X5, Model Y"></div>
+              <div class="field"><label data-i18n="year">Rok produkcji</label><div class="range-fields"><select id="yearFrom" name="yearFrom" aria-label="Year from"></select><span>—</span><select id="yearTo" name="yearTo" aria-label="Year to"></select></div></div>
+              <div class="field"><label for="mileage" data-i18n="mileage">Maksymalny przebieg</label><select id="mileage" name="mileage"><option value="" data-i18n="noPreference">Bez znaczenia</option><option value="50000">50 000 km</option><option value="100000">100 000 km</option><option value="150000">150 000 km</option><option value="200000">200 000 km</option></select></div>
+              <div class="field"><label for="transmission" data-i18n="transmission">Skrzynia biegów</label><select id="transmission" name="transmission"><option value="any" data-i18n="noPreference">Bez znaczenia</option><option value="manual" data-i18n="manual">Manualna</option><option value="automatic" data-i18n="automatic">Automatyczna</option></select></div>
+              <div class="field"><label for="fuel" data-i18n="fuel">Rodzaj paliwa</label><select id="fuel" name="fuel"><option value="any" data-i18n="noPreference">Bez znaczenia</option><option value="petrol" data-i18n="petrol">Benzyna</option><option value="diesel" data-i18n="diesel">Diesel</option><option value="hybrid" data-i18n="hybrid">Hybryda</option><option value="electric" data-i18n="electric">Elektryczny</option><option value="otherFuel" data-i18n="otherFuel">Inne</option></select></div>
+              <div class="field"><label for="body" data-i18n="body">Typ nadwozia</label><select id="body" name="body"><option value="any" data-i18n="noPreference">Bez znaczenia</option><option value="sedan">Sedan</option><option value="wagon" data-i18n="wagon">Kombi</option><option value="suv">SUV</option><option value="hatchback">Hatchback</option><option value="coupe">Coupé</option><option value="convertible" data-i18n="convertible">Kabriolet</option></select></div>
+              <div class="field"><label for="budget" data-i18n="budget">Budżet</label><select id="budget" name="budget"><option value="" data-i18n="budgetAny">Bez określonego limitu</option><option>do 10 000 €</option><option>10 000–20 000 €</option><option>20 000–30 000 €</option><option>30 000–40 000 €</option><option>40 000–50 000 €</option><option data-i18n="budgetOver">powyżej 50 000 €</option></select></div>
             </div>
+          </div>
+          <div class="form-section"><div class="form-heading"><span>02</span><h3 data-i18n="formContactHeading">Dane kontaktowe</h3></div><div class="form-grid">
+            <div class="field"><label for="contactName" data-i18n="name">Imię</label><input id="contactName" name="name" type="text" data-placeholder="namePlaceholder" placeholder="Twoje imię" autocomplete="name"></div>
+            <div class="field"><label for="contactPhone" data-i18n="phone">Telefon</label><input id="contactPhone" name="phone" type="tel" data-placeholder="phonePlaceholder" placeholder="+48 ..." autocomplete="tel"></div>
+            <div class="field"><label for="contactEmail" data-i18n="email">Adres e-mail</label><input id="contactEmail" name="email" type="email" placeholder="name@example.com" autocomplete="email"></div>
+            <div class="field full-width"><label for="requirements" data-i18n="requirements">Dodatkowe informacje</label><textarea id="requirements" name="requirements" rows="3" data-placeholder="requirementsPlaceholder" placeholder="Kolor, napęd, wyposażenie..."></textarea></div>
+          </div></div>
+          <p class="privacy-note" data-i18n="privacy">Podając dane kontaktowe, zgadzasz się na kontakt w sprawie zapytania.</p>
+          <div class="submit-buttons"><button class="btn btn-whatsapp" type="button" id="whatsappButton"><span class="wa-icon">◉</span><span data-i18n="sendWhatsApp">Wyślij przez WhatsApp</span><span>↗</span></button><button class="btn btn-telegram" type="button" id="telegramButton"><span class="telegram-icon">➤</span><span data-i18n="sendTelegram">Wyślij przez Telegram</span><span>↗</span></button><button class="btn btn-form" type="submit"><span data-i18n="sendEmail">Wyślij e-mail</span><span>↗</span></button></div>
+          <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+        </form></div>
+      </div>
+    </section>
 
-            <div class="form-section">
-                <h3 data-i18n="contactDetails">Dane kontaktowe</h3>
 
-                <div class="form-grid contact-fields">
-                    <div class="field">
-                        <label for="contactName" data-i18n="name">Imię</label>
-                        <input id="contactName" name="name" type="text" data-placeholder="namePlaceholder" placeholder="Twoje imię">
-                    </div>
-
-                    <div class="field">
-                        <label for="contactPhone" data-i18n="phone">Numer telefonu</label>
-                        <input id="contactPhone" name="phone" type="tel" placeholder="+48 ...">
-                    </div>
-
-                    <div class="field">
-                        <label for="contactEmail" data-i18n="email">Adres e-mail</label>
-                        <input id="contactEmail" name="email" type="email" placeholder="example@email.com">
-                    </div>
-
-                    <div class="field">
-                        <label for="requirements" data-i18n="requirements">Dodatkowe wymagania</label>
-                        <textarea id="requirements" name="requirements" rows="4" data-placeholder="requirementsPlaceholder" placeholder="Kolor, napęd, wyposażenie, preferowany rynek zakupu itd."></textarea>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-footer">
-                <p class="privacy-note" data-i18n="privacy">Podając dane kontaktowe, zgadzasz się na kontakt w sprawie zapytania.</p>
-
-                <div class="submit-buttons">
-                    <button class="submit-button whatsapp-button" type="button" id="whatsappButton">WhatsApp</button>
-                    <button class="submit-button email-button" type="submit" data-i18n="sendEmail">Wyślij e-mail</button>
-                </div>
-
-                <p id="formMessage" class="form-message" aria-live="polite"></p>
-            </div>
-        </form>
-    </div>
-</section>
-
-<section id="contact" class="contact">
-    <div class="container">
-        <h2 data-i18n="contactTitle">Napisz do nas!</h2>
-        <p class="subtitle" data-i18n="contactSubtitle">I weź swój samochód!</p>
-
-        <div class="contact-grid">
-            <div>
-                <p>AUTOAGENCY Sp. z o.o.</p>
-                <p>TAX: PL5223315571</p>
-                <p>REGON: 540018737</p>
-                <p>KRS: 0001134992</p>
-                <p>EORI: PL522331557100000</p>
-            </div>
-
-            <div>
-                <p>📧 <a href="mailto:autoagency.pl@gmail.com">autoagency.pl@gmail.com</a></p>
-                <p>📍 Łopuszańska 24C<br>02-220 Warszawa</p>
-                <p>📞 <a href="tel:+48451675575">WhatsApp, Viber<br>+48 451 675 575</a></p>
-            </div>
+    <section class="inventory section-pad" id="inventory" aria-labelledby="inventoryTitle">
+      <div class="wrap">
+        <div class="section-top inventory-top">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span><span data-inventory-i18n="eyebrow">WYBRANE SAMOCHODY</span></div>
+            <h2 id="inventoryTitle" data-inventory-i18n="title">Samochody <em>w ofercie.</em></h2>
+          </div>
+          <p class="section-aside" data-inventory-i18n="intro">Zobacz przykładowe karty samochodów. Dane na tej demonstracyjnej wersji są przykładowe — rzeczywistą dostępność i specyfikację potwierdzamy indywidualnie.</p>
         </div>
 
-        <iframe title="Auto Agency location" loading="lazy"
-            src="https://maps.google.com/maps?q=Łopuszańska%2024C%20Warszawa&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-    </div>
-</section>
+        <div class="inventory-carousel" aria-roledescription="carousel" data-inventory-carousel>
+          <div class="inventory-viewport">
+            <div class="inventory-track" id="inventoryTrack" aria-live="polite"></div>
+          </div>
+          <div class="inventory-bottom">
+            <p class="inventory-note" data-inventory-i18n="note">Przykładowe dane prezentacyjne. Brak cen — szczegóły samochodu potwierdzamy na zapytanie.</p>
+            <div class="inventory-controls">
+              <button class="inventory-arrow" id="inventoryPrev" type="button" aria-label="Previous cars" data-inventory-i18n-aria="previous">←</button>
+              <div class="inventory-dots" id="inventoryDots" aria-label="Choose a car slide"></div>
+              <button class="inventory-arrow" id="inventoryNext" type="button" aria-label="Next cars" data-inventory-i18n-aria="next">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</main>
-
-<footer>© 2026 Auto Agency</footer>
-
-<script src="script.js"></script>
+    <section class="contact section-pad" id="contact"><div class="wrap"><div class="section-top"><div><div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="contactEyebrow">POROZMAWIAJMY</span></div><h2 data-i18n="contactTitle">Masz pytania?<br><em>Jesteśmy do dyspozycji.</em></h2></div><p class="section-aside" data-i18n="contactIntro">Skontaktuj się z nami w wygodny dla Ciebie sposób lub odwiedź nasze biuro w Warszawie.</p></div>
+      <div class="contact-layout"><div class="contact-details"><div class="company-name">AUTOAGENCY <span>Sp. z o.o.</span></div><div class="contact-row"><span class="contact-label" data-i18n="contactEmailLabel">E-MAIL</span><a href="mailto:autoagency.pl@gmail.com">autoagency.pl@gmail.com ↗</a></div><div class="contact-row"><span class="contact-label" data-i18n="contactPhoneLabel">TELEFON / MESSENGER</span><a href="tel:+48451675575">+48 451 675 575 ↗</a><span class="contact-sub">WhatsApp · Viber</span></div><div class="contact-row"><span class="contact-label" data-i18n="contactAddressLabel">BIURO</span><address>Łopuszańska 24C<br>02-220 Warszawa, Polska</address><a class="map-link" href="https://maps.google.com/?q=Łopuszańska+24C+Warszawa" target="_blank" rel="noopener noreferrer" data-i18n="openMap">Otwórz mapę ↗</a></div><div class="company-ids"><span>VAT: PL5223315571</span><span>NIP: 5223315571</span><span>REGON: 540018737</span><span>KRS: 0001134992</span><span>EORI: PL522331557100000</span></div></div><div class="map-wrap"><iframe title="AutoAgency office in Warsaw" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%C5%81opusza%C5%84ska%2024C%20Warszawa&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe><div class="map-caption"><span class="map-pin">⌖</span><div><strong>AutoAgency</strong><span>Łopuszańska 24C, Warszawa</span></div><a href="https://maps.google.com/?q=Łopuszańska+24C+Warszawa" target="_blank" rel="noopener noreferrer" aria-label="Open map">↗</a></div></div></div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-top"><a class="brand brand-footer" href="#top" aria-label="AutoAgency — strona główna"><img class="brand-logo" src="images/logo.png" alt="AutoAgency"></a><p data-i18n="footerLine">Europejski rynek. Przejrzysty proces. Jeden partner.</p><a class="back-top" href="#top"><span data-i18n="backTop">Wróć na górę</span> ↑</a></div><div class="wrap footer-bottom"><span>© <span id="yearNow">2026</span> AutoAgency Sp. z o.o.</span><span data-i18n="footerDisclaimer">Zakres usług i warunki transakcji potwierdzamy indywidualnie.</span><div class="footer-languages"><button type="button" data-lang="pl">PL</button><button type="button" data-lang="en">EN</button><button type="button" data-lang="ru">RU</button></div></div></footer>
+  <script src="script.js"></script>
+  <script src="inventory.js"></script>
 </body>
 </html>
