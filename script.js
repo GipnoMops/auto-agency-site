@@ -1,358 +1,138 @@
-const EMAIL = "autoagency.pl@gmail.com";
-const WHATSAPP = "48451675575";
+const EMAIL = 'autoagency.pl@gmail.com';
+const WHATSAPP = '48451675575';
 
 const translations = {
-    pl: {
-        navWhy: "Dlaczego my",
-        navConfigurator: "Podobierz auto",
-        navContact: "Kontakty",
-        heroTitle: "Import samochodów z USA",
-        heroText: "Pomagamy znaleźć i dostarczyć Twój wymarzony samochód",
-        heroButton: "Podobierz swój samochód",
-        about: "Kompleksowa obsługa importu samochodów. Wybór, transport, dokumenty i dostawa pod dom klienta.",
-        whyTitle: "Dlaczego Auto Agency?",
-        why1Title: "Wybieramy samochód, który chcesz",
-        why1Text: "Określasz wymagania i budżet pojazdu — znajdziemy odpowiedni samochód zgodnie z Twoimi oczekiwaniami.",
-        why2Title: "Podpisujemy umowę, depozyt",
-        why2Text: "Zawieramy umowę na wyszukanie i zakup samochodu. Depozyt jest zwracany w całości, jeśli samochód nie zostanie zakupiony.",
-        why3Title: "Transportujemy Twój samochód",
-        why3Text: "Organizujemy dostawę samochodu do Polski. Samochód jest ubezpieczony podczas transportu.",
-        why4Title: "Odbierasz samochód i dokumenty",
-        why4Text: "Gdy wszystkie dokumenty będą gotowe, odbierzesz samochód albo dostarczymy go pod Twój dom.",
-        why5Title: "Eksport",
-        why5Text: "Zapewniamy pełen zakres usług związanych z organizacją eksportu samochodów poza UE.",
-        configEyebrow: "DOBÓR SAMOCHODU",
-        configTitle: "Podobierz swoje auto",
-        configIntro: "Podaj swoje wymagania, a my znajdziemy samochód odpowiadający Twoim oczekiwaniom.",
-        carDetails: "Samochód",
-        contactDetails: "Dane kontaktowe",
-        brand: "Marka",
-        model: "Model",
-        year: "Rok produkcji",
-        mileage: "Przebieg maksymalny",
-        transmission: "Skrzynia biegów",
-        fuel: "Rodzaj paliwa",
-        body: "Nadwozie",
-        budget: "Budżet",
-        name: "Imię",
-        phone: "Numer telefonu",
-        email: "Adres e-mail",
-        requirements: "Dodatkowe wymagania",
-        choose: "Wybierz",
-        other: "Inna",
-        noPreference: "Bez znaczenia",
-        manual: "Manualna",
-        automatic: "Automatyczna",
-        petrol: "Benzyna",
-        diesel: "Diesel",
-        hybrid: "Hybryda",
-        electric: "Elektryczny",
-        wagon: "Kombi",
-        convertible: "Kabriolet",
-        budgetAny: "Bez określonego limitu",
-        modelPlaceholder: "np. X5, Mustang, Model Y",
-        namePlaceholder: "Twoje imię",
-        requirementsPlaceholder: "Kolor, napęd, wyposażenie, preferowany rynek zakupu itd.",
-        privacy: "Podając dane kontaktowe, zgadzasz się na kontakt w sprawie zapytania.",
-        sendEmail: "Wyślij e-mail",
-        contactTitle: "Napisz do nas!",
-        contactSubtitle: "I weź swój samochód!",
-        yearPlaceholder: "Rok",
-        formSuccessEmail: "Otwieramy program pocztowy z przygotowaną wiadomością.",
-        formSuccessWhatsApp: "Otwieramy WhatsApp z przygotowaną wiadomością.",
-        formErrorContact: "Podaj przynajmniej numer telefonu lub adres e-mail.",
-        emailSubject: "Zapytanie o samochód — Auto Agency"
-    },
-    en: {
-        navWhy: "Why us",
-        navConfigurator: "Configure your car",
-        navContact: "Contact",
-        heroTitle: "Car import from the USA",
-        heroText: "We help you find and deliver your dream car",
-        heroButton: "Configure your car",
-        about: "Comprehensive car import service. Selection, transport, documents and delivery to your door.",
-        whyTitle: "Why Auto Agency?",
-        why1Title: "We find the car you want",
-        why1Text: "Tell us your requirements and budget — we will find a vehicle that matches your expectations.",
-        why2Title: "We sign the agreement",
-        why2Text: "We sign an agreement for searching and purchasing the car. The deposit is fully refundable if the car is not purchased.",
-        why3Title: "We transport your car",
-        why3Text: "We organize delivery of your car to Poland. The vehicle is insured during transport.",
-        why4Title: "You receive the car and documents",
-        why4Text: "Once all documents are ready, you can collect the car or we can deliver it to your home.",
-        why5Title: "Export",
-        why5Text: "We provide a full range of services for organizing vehicle exports outside the EU.",
-        configEyebrow: "CAR SELECTION",
-        configTitle: "Configure your car",
-        configIntro: "Tell us what you are looking for and we will find a car that matches your requirements.",
-        carDetails: "Car",
-        contactDetails: "Contact details",
-        brand: "Make",
-        model: "Model",
-        year: "Production year",
-        mileage: "Maximum mileage",
-        transmission: "Transmission",
-        fuel: "Fuel type",
-        body: "Body type",
-        budget: "Budget",
-        name: "Name",
-        phone: "Phone number",
-        email: "Email address",
-        requirements: "Additional requirements",
-        choose: "Choose",
-        other: "Other",
-        noPreference: "No preference",
-        manual: "Manual",
-        automatic: "Automatic",
-        petrol: "Petrol",
-        diesel: "Diesel",
-        hybrid: "Hybrid",
-        electric: "Electric",
-        wagon: "Wagon",
-        convertible: "Convertible",
-        budgetAny: "No specific limit",
-        modelPlaceholder: "e.g. X5, Mustang, Model Y",
-        namePlaceholder: "Your name",
-        requirementsPlaceholder: "Colour, drivetrain, equipment, preferred market, etc.",
-        privacy: "By providing your contact details, you agree to be contacted regarding your enquiry.",
-        sendEmail: "Send by email",
-        contactTitle: "Contact us!",
-        contactSubtitle: "And get your car!",
-        yearPlaceholder: "Year",
-        formSuccessEmail: "Opening your email application with a prepared message.",
-        formSuccessWhatsApp: "Opening WhatsApp with a prepared message.",
-        formErrorContact: "Please provide at least a phone number or email address.",
-        emailSubject: "Car enquiry — Auto Agency"
-    },
-    ru: {
-        navWhy: "Почему мы",
-        navConfigurator: "Подобрать авто",
-        navContact: "Контакты",
-        heroTitle: "Импорт автомобилей из США",
-        heroText: "Поможем найти и доставить автомобиль вашей мечты",
-        heroButton: "Подобрать автомобиль",
-        about: "Полное сопровождение импорта автомобилей: подбор, транспортировка, документы и доставка до дома клиента.",
-        whyTitle: "Почему Auto Agency?",
-        why1Title: "Находим нужный вам автомобиль",
-        why1Text: "Вы указываете требования и бюджет — мы найдём подходящий автомобиль в соответствии с вашими пожеланиями.",
-        why2Title: "Заключаем договор",
-        why2Text: "Заключаем договор на поиск и покупку автомобиля. Депозит полностью возвращается, если автомобиль не был приобретён.",
-        why3Title: "Организуем перевозку",
-        why3Text: "Организуем доставку автомобиля в Польшу. Автомобиль застрахован на время перевозки.",
-        why4Title: "Вы получаете автомобиль и документы",
-        why4Text: "После подготовки всех документов вы забираете автомобиль сами или мы доставляем его прямо к вам.",
-        why5Title: "Экспорт",
-        why5Text: "Предоставляем полный комплекс услуг по организации экспорта автомобилей за пределы ЕС.",
-        configEyebrow: "ПОДБОР АВТОМОБИЛЯ",
-        configTitle: "Подберите свой автомобиль",
-        configIntro: "Укажите ваши требования, а мы найдём автомобиль, который им соответствует.",
-        carDetails: "Автомобиль",
-        contactDetails: "Контактные данные",
-        brand: "Марка",
-        model: "Модель",
-        year: "Год выпуска",
-        mileage: "Максимальный пробег",
-        transmission: "Коробка передач",
-        fuel: "Тип топлива",
-        body: "Тип кузова",
-        budget: "Бюджет",
-        name: "Имя",
-        phone: "Номер телефона",
-        email: "E-mail",
-        requirements: "Дополнительные требования",
-        choose: "Выберите",
-        other: "Другая",
-        noPreference: "Без разницы",
-        manual: "Механика",
-        automatic: "Автомат",
-        petrol: "Бензин",
-        diesel: "Дизель",
-        hybrid: "Гибрид",
-        electric: "Электро",
-        wagon: "Универсал",
-        convertible: "Кабриолет",
-        budgetAny: "Без конкретного лимита",
-        modelPlaceholder: "например X5, Mustang, Model Y",
-        namePlaceholder: "Ваше имя",
-        requirementsPlaceholder: "Цвет, привод, комплектация, предпочтительный рынок покупки и т.д.",
-        privacy: "Указывая контактные данные, вы соглашаетесь на связь по вашему запросу.",
-        sendEmail: "Отправить на e-mail",
-        contactTitle: "Напишите нам!",
-        contactSubtitle: "И получите свой автомобиль!",
-        yearPlaceholder: "Год",
-        formSuccessEmail: "Открываем почтовую программу с подготовленным сообщением.",
-        formSuccessWhatsApp: "Открываем WhatsApp с подготовленным сообщением.",
-        formErrorContact: "Укажите хотя бы номер телефона или e-mail.",
-        emailSubject: "Запрос на автомобиль — Auto Agency"
-    }
+  pl: {
+    metaDescription:'AutoAgency — kompleksowa obsługa zakupu samochodów w Europie, dostawy i formalności w Polsce oraz eksportu poza UE.',
+    topline:'Samochody z europejskich aukcji i od dealerów — kompleksowa obsługa w Polsce',navProcess:'Jak to działa',navServices:'Usługi',navConfigurator:'Dobór auta',navContact:'Kontakt',heroEyebrow:'EUROPEAN CAR SOURCING',heroTitle:'Twój samochód.<br><em>Nasza odpowiedzialność.</em>',heroText:'Pomagamy kupić samochód w Europie — od wyszukania odpowiedniej oferty na aukcji leasingowej lub u dealera po dostawę i formalności w Polsce.',heroButton:'Znajdźmy Twój samochód',heroSecondary:'Zobacz, jak działamy',heroNote:'Dla klientów prywatnych, agentów i dealerów',heroBottom:'OD WYBORU DO REJESTRACJI',introKicker:'MĄDRY ZAKUP<br>BEZ CHAOSU',introText:'Łączymy dostęp do europejskich ofert z praktyczną obsługą zakupu, transportu i dokumentów. Ty określasz potrzeby — my pomagamy przejść przez kolejne etapy.',introStamp:'PARTNER W ZAKUPIE',audienceEyebrow:'DLA KOGO PRACUJEMY',audienceTitle:'Dwa modele współpracy.<br><em>Jeden partner.</em>',audienceIntro:'Niezależnie od tego, czy szukasz auta dla siebie, czy rozwijasz działalność handlową — dopasujemy proces do Twoich potrzeb.',privateTitle:'Dla klientów prywatnych',privateText:'Pomagamy znaleźć samochód odpowiadający Twoim oczekiwaniom i budżetowi, a następnie przejść przez zakup, dostawę oraz formalności.',privateLink:'Opowiedz nam, czego szukasz',businessTitle:'Dla agentów i dealerów',businessText:'Wspieramy partnerów handlowych w wyszukiwaniu ofert na europejskich aukcjach leasingowych i u dealerów oraz w organizacji kolejnych etapów transakcji.',businessLink:'Porozmawiajmy o współpracy',servicesEyebrow:'OBSŁUGA W JEDNYM MIEJSCU',servicesTitle:'Więcej niż<br><em>sam zakup auta.</em>',servicesIntro:'Organizujemy proces od wyszukania odpowiedniego samochodu aż po dokumenty i odbiór. Zakres ustalamy dla konkretnej transakcji.',photoCaption:'EUROPEAN SOURCING',service1Title:'Wyszukiwanie ofert',service1Text:'Europejskie aukcje leasingowe i oferty dealerów — zgodnie z Twoimi kryteriami.',service2Title:'Zakup i dokumenty',service2Text:'Wsparcie na etapie zakupu oraz przygotowania dokumentacji transakcji.',service3Title:'Podatki i rozliczenia',service3Text:'Obsługa formalności związanych z akcyzą i VAT, odpowiednio do warunków transakcji.',service4Title:'Dostawa do Polski',service4Text:'Organizacja transportu samochodu do biura w Polsce.',service5Title:'Tłumaczenia i przegląd',service5Text:'Tłumaczenie przysięgłe dokumentów i organizacja badania technicznego.',service6Title:'Rejestracja i tablice',service6Text:'Pomoc w rejestracji pojazdu i uzyskaniu tablic rejestracyjnych.',taxNote:'Dla podmiotów gospodarczych możliwe jest wystawienie faktury VAT 23%. W opisanym modelu zakupu klient prywatny jest zwolniony z PCC 2%. Szczegóły podatkowe potwierdzamy dla konkretnej transakcji.',processEyebrow:'PROSTY PROCES',processTitle:'Od pierwszej rozmowy<br><em>do odbioru samochodu.</em>',processIntro:'Jasne etapy współpracy pomagają wiedzieć, co dzieje się na każdym kroku.',step1Title:'Rozmawiamy o potrzebach',step1Text:'Ustalamy parametry samochodu, budżet i oczekiwania.',step2Title:'Szukamy ofert',step2Text:'Analizujemy dostępne samochody na aukcjach i u dealerów.',step3Title:'Organizujemy zakup',step3Text:'Po uzgodnieniu oferty przechodzimy do zakupu i dokumentów.',step4Title:'Dostarczamy auto',step4Text:'Organizujemy transport do Polski i kolejne formalności.',step5Title:'Przekazujemy samochód',step5Text:'Odbierasz samochód i przygotowane dokumenty.',processFooter:'Masz już konkretny samochód na oku?',processLink:'Wyślij nam ofertę lub wymagania',exportLabel:'EXPORT SUPPORT',exportEyebrow:'POZA UNIĄ EUROPEJSKĄ',exportTitle:'Zakup w Europie.<br><em>Eksport dalej.</em>',exportText:'Organizujemy obsługę eksportu samochodów poza UE do krajów, do których eksport jest możliwy. Zakres dokumentów i procedur zależy od kierunku oraz konkretnej transakcji.',exportPoint1:'Przygotowanie dokumentów eksportowych EX',exportPoint2:'Wsparcie w organizacji tablic tranzytowych',exportPoint3:'Ustalenie możliwości eksportu dla kraju docelowego',exportButton:'Zapytaj o eksport',meetingEyebrow:'JAK CI WYGODNIE',meetingTitle:'Spotkajmy się<br><em>na Twoich zasadach.</em>',meetingIntro:'Współpracę możemy rozpocząć w sposób, który najlepiej pasuje do Twojego planu dnia.',meeting1Title:'W naszym biurze',meeting1Text:'Zapraszamy do biura w Warszawie, gdzie możemy omówić szczegóły współpracy.',meeting1Foot:'WARSZAWA, POLSKA',meeting2Title:'W dogodnym miejscu',meeting2Text:'Możemy uzgodnić spotkanie w innym, wygodnym dla Ciebie miejscu.',meeting2Foot:'PO UZGODNIENIU',meeting3Title:'Zdalnie',meeting3Text:'Porozmawiajmy telefonicznie lub online — bez konieczności dojazdu.',meeting3Foot:'TELEFON / ONLINE',formEyebrow:'ZACZNIJMY OD ROZMOWY',formTitle:'Opowiedz nam<br><em>o swoim samochodzie.</em>',formIntro:'Wypełnij formularz, a przygotujemy się do rozmowy o Twoich oczekiwaniach. Im więcej szczegółów podasz, tym łatwiej będzie nam określić kolejny krok.',formPromise:'Bez zobowiązań — najpierw poznajmy Twoje potrzeby.',formPreferCall:'Wolisz porozmawiać?',formVehicleHeading:'Samochód i budżet',clientType:'Kim jesteś?',clientPrivate:'Klient prywatny',clientBusiness:'Agent / dealer',destination:'Kraj docelowy',destinationPlaceholder:'Polska, Litwa, ...',brand:'Marka',choose:'Wybierz',other:'Inna',model:'Model',modelPlaceholder:'np. X5, Model Y',year:'Rok produkcji',yearPlaceholder:'Rok',mileage:'Maksymalny przebieg',noPreference:'Bez znaczenia',transmission:'Skrzynia biegów',manual:'Manualna',automatic:'Automatyczna',fuel:'Rodzaj paliwa',petrol:'Benzyna',diesel:'Diesel',hybrid:'Hybryda',electric:'Elektryczny',otherFuel:'Inne',body:'Typ nadwozia',wagon:'Kombi',convertible:'Kabriolet',budget:'Budżet',budgetAny:'Bez określonego limitu',budgetOver:'powyżej 50 000 €',formContactHeading:'Dane kontaktowe',name:'Imię',namePlaceholder:'Twoje imię',phone:'Telefon',phonePlaceholder:'+48 ...',email:'Adres e-mail',requirements:'Dodatkowe informacje',requirementsPlaceholder:'Kolor, napęd, wyposażenie, preferowany rynek zakupu...',privacy:'Podając dane kontaktowe, zgadzasz się na kontakt w sprawie zapytania.',sendWhatsApp:'Wyślij przez WhatsApp',sendTelegram:'Wyślij przez Telegram',sendTelegramReady:'Otwieramy Telegram. Treść zapytania skopiowano — wklej ją w czacie i wyślij.',sendTelegramCopyFailed:'Otwieramy Telegram. Skopiuj treść formularza i wklej ją w czacie, aby wysłać zapytanie.',sendEmail:'Wyślij e-mail',formErrorContact:'Podaj przynajmniej numer telefonu lub adres e-mail.',formSuccessEmail:'Otwieramy program pocztowy z przygotowaną wiadomością.',formSuccessWhatsApp:'Otwieramy WhatsApp z przygotowaną wiadomością.',emailSubject:'Zapytanie o samochód — AutoAgency',contactEyebrow:'POROZMAWIAJMY',contactTitle:'Masz pytania?<br><em>Jesteśmy do dyspozycji.</em>',contactIntro:'Skontaktuj się z nami w wygodny dla Ciebie sposób lub odwiedź nasze biuro w Warszawie.',contactEmailLabel:'E-MAIL',contactPhoneLabel:'TELEFON / MESSENGER',contactAddressLabel:'BIURO',openMap:'Otwórz mapę',footerLine:'Europejski rynek. Przejrzysty proces. Jeden partner.',backTop:'Wróć na górę',footerDisclaimer:'Zakres usług i warunki transakcji potwierdzamy indywidualnie.',formClientType:'Typ klienta',formDestination:'Kraj docelowy',formErrorYear:'Rok początkowy nie może być późniejszy niż końcowy.',brandOther:'Inna marka'
+  },
+  en: {
+    metaDescription:'AutoAgency helps source cars in Europe, arrange delivery and paperwork in Poland, and coordinate exports outside the EU.',
+    topline:'Cars from European leasing auctions and dealers — end-to-end support in Poland',navProcess:'How it works',navServices:'Services',navConfigurator:'Find a car',navContact:'Contact',heroEyebrow:'EUROPEAN CAR SOURCING',heroTitle:'Your car.<br><em>Our responsibility.</em>',heroText:'We help you buy a car in Europe — from finding the right listing at a leasing auction or dealer to delivery and paperwork in Poland.',heroButton:'Let’s find your car',heroSecondary:'See how we work',heroNote:'For private buyers, agents and dealers',heroBottom:'FROM SELECTION TO REGISTRATION',introKicker:'A SMARTER BUY<br>WITHOUT THE CHAOS',introText:'We combine access to European listings with practical support for purchasing, transport and documents. You define your needs — we help you through each step.',introStamp:'YOUR BUYING PARTNER',audienceEyebrow:'WHO WE WORK WITH',audienceTitle:'Two ways to work.<br><em>One partner.</em>',audienceIntro:'Whether you are looking for a car for yourself or growing a vehicle business, we adapt the process to your needs.',privateTitle:'For private buyers',privateText:'We help you find a car that matches your expectations and budget, then guide you through the purchase, delivery and formalities.',privateLink:'Tell us what you are looking for',businessTitle:'For agents and dealers',businessText:'We support trade partners in sourcing listings from European leasing auctions and dealers and coordinating the next stages of a transaction.',businessLink:'Discuss a partnership',servicesEyebrow:'SUPPORT IN ONE PLACE',servicesTitle:'More than<br><em>just buying a car.</em>',servicesIntro:'We coordinate the process from finding the right vehicle through documents and handover. The scope is agreed for each transaction.',photoCaption:'EUROPEAN SOURCING',service1Title:'Finding offers',service1Text:'European leasing auctions and dealer listings matched to your criteria.',service2Title:'Purchase and documents',service2Text:'Support during the purchase and preparation of transaction documents.',service3Title:'Taxes and settlements',service3Text:'Support with excise duty and VAT formalities, according to the transaction terms.',service4Title:'Delivery to Poland',service4Text:'Arranging transport of the vehicle to our office in Poland.',service5Title:'Certified translation and inspection',service5Text:'Sworn translation of documents and arrangement of a technical inspection.',service6Title:'Registration and plates',service6Text:'Assistance with vehicle registration and obtaining registration plates.',taxNote:'A 23% VAT invoice may be issued to business entities. Under the described purchase model, private buyers are exempt from the 2% PCC tax. Tax details are confirmed for each specific transaction.',processEyebrow:'A CLEAR PROCESS',processTitle:'From the first conversation<br><em>to vehicle handover.</em>',processIntro:'Clear stages help you understand what is happening at every step.',step1Title:'We discuss your needs',step1Text:'We establish the vehicle specifications, budget and expectations.',step2Title:'We search listings',step2Text:'We review available cars at auctions and from dealers.',step3Title:'We arrange the purchase',step3Text:'Once an offer is agreed, we proceed with the purchase and documents.',step4Title:'We deliver the car',step4Text:'We arrange transport to Poland and the next formalities.',step5Title:'We hand over the vehicle',step5Text:'You receive the car and the prepared documents.',processFooter:'Already have a specific car in mind?',processLink:'Send us a listing or your requirements',exportLabel:'EXPORT SUPPORT',exportEyebrow:'OUTSIDE THE EUROPEAN UNION',exportTitle:'Buy in Europe.<br><em>Export further.</em>',exportText:'We coordinate vehicle exports outside the EU to destinations where export is possible. Required documents and procedures depend on the destination and transaction.',exportPoint1:'Preparation of EX export documents',exportPoint2:'Support with arranging transit plates',exportPoint3:'Checking export feasibility for the destination country',exportButton:'Ask about export',meetingEyebrow:'YOUR WAY TO MEET',meetingTitle:'Let’s meet<br><em>on your terms.</em>',meetingIntro:'We can start working together in the way that best fits your schedule.',meeting1Title:'At our office',meeting1Text:'Visit our Warsaw office to discuss the details of working together.',meeting1Foot:'WARSAW, POLAND',meeting2Title:'At a convenient location',meeting2Text:'We can arrange a meeting at another location that works for you.',meeting2Foot:'BY ARRANGEMENT',meeting3Title:'Remotely',meeting3Text:'Let’s talk by phone or online — no travel required.',meeting3Foot:'PHONE / ONLINE',formEyebrow:'LET’S START A CONVERSATION',formTitle:'Tell us about<br><em>the car you want.</em>',formIntro:'Fill out the form and we will prepare to discuss your requirements. The more detail you share, the easier it is to determine the next step.',formPromise:'No obligation — first, let’s understand what you need.',formPreferCall:'Prefer to talk?',formVehicleHeading:'Vehicle and budget',clientType:'Who are you?',clientPrivate:'Private buyer',clientBusiness:'Agent / dealer',destination:'Destination country',destinationPlaceholder:'Poland, Lithuania, ...',brand:'Make',choose:'Choose',other:'Other',model:'Model',modelPlaceholder:'e.g. X5, Model Y',year:'Production year',yearPlaceholder:'Year',mileage:'Maximum mileage',noPreference:'No preference',transmission:'Transmission',manual:'Manual',automatic:'Automatic',fuel:'Fuel type',petrol:'Petrol',diesel:'Diesel',hybrid:'Hybrid',electric:'Electric',otherFuel:'Other',body:'Body type',wagon:'Wagon',convertible:'Convertible',budget:'Budget',budgetAny:'No specific limit',budgetOver:'over €50,000',formContactHeading:'Contact details',name:'Name',namePlaceholder:'Your name',phone:'Phone',phonePlaceholder:'+48 ...',email:'Email address',requirements:'Additional information',requirementsPlaceholder:'Colour, drivetrain, equipment, preferred market...',privacy:'By providing your contact details, you agree to be contacted regarding your enquiry.',sendWhatsApp:'Send via WhatsApp',sendTelegram:'Send via Telegram',sendTelegramReady:'Opening Telegram. Your enquiry has been copied — paste it into the chat and send it.',sendTelegramCopyFailed:'Opening Telegram. Copy the form details and paste them into the chat to send your enquiry.',sendEmail:'Send by email',formErrorContact:'Please provide at least a phone number or email address.',formSuccessEmail:'Opening your email application with a prepared message.',formSuccessWhatsApp:'Opening WhatsApp with a prepared message.',emailSubject:'Car enquiry — AutoAgency',contactEyebrow:'LET’S TALK',contactTitle:'Have questions?<br><em>We are here to help.</em>',contactIntro:'Contact us in whichever way is most convenient, or visit our Warsaw office.',contactEmailLabel:'EMAIL',contactPhoneLabel:'PHONE / MESSENGER',contactAddressLabel:'OFFICE',openMap:'Open map',footerLine:'European market. A clear process. One partner.',backTop:'Back to top',footerDisclaimer:'Service scope and transaction terms are confirmed individually.',formClientType:'Client type',formDestination:'Destination country',formErrorYear:'The start year cannot be later than the end year.',brandOther:'Other make'
+  },
+  ru: {
+    metaDescription:'AutoAgency — подбор и покупка автомобилей в Европе, доставка и оформление в Польше, сопровождение экспорта за пределы ЕС.',
+    topline:'Автомобили с европейских лизинговых аукционов и от дилеров — полное сопровождение в Польше',navProcess:'Как это работает',navServices:'Услуги',navConfigurator:'Подбор авто',navContact:'Контакты',heroEyebrow:'ПОДБОР АВТОМОБИЛЕЙ В ЕВРОПЕ',heroTitle:'Ваш автомобиль.<br><em>Наша ответственность.</em>',heroText:'Помогаем купить автомобиль в Европе: от поиска подходящего предложения на лизинговом аукционе или у дилера до доставки и оформления документов в Польше.',heroButton:'Подобрать автомобиль',heroSecondary:'Как мы работаем',heroNote:'Для частных клиентов, агентов и дилеров',heroBottom:'ОТ ВЫБОРА ДО РЕГИСТРАЦИИ',introKicker:'РАЗУМНАЯ ПОКУПКА<br>БЕЗ ЛИШНЕЙ СУЕТЫ',introText:'Объединяем доступ к европейским предложениям с практической помощью при покупке, перевозке и оформлении документов. Вы определяете потребности — мы помогаем пройти все этапы.',introStamp:'ВАШ ПАРТНЁР ПО ПОКУПКЕ',audienceEyebrow:'С КЕМ МЫ РАБОТАЕМ',audienceTitle:'Два формата сотрудничества.<br><em>Один партнёр.</em>',audienceIntro:'Ищете автомобиль для себя или развиваете торговый бизнес — адаптируем процесс под ваши задачи.',privateTitle:'Для частных покупателей',privateText:'Помогаем найти автомобиль под ваши ожидания и бюджет, а затем пройти этапы покупки, доставки и оформления документов.',privateLink:'Расскажите, что вы ищете',businessTitle:'Для агентов и дилеров',businessText:'Помогаем партнёрам искать предложения на европейских лизинговых аукционах и у дилеров и организовывать следующие этапы сделки.',businessLink:'Обсудить сотрудничество',servicesEyebrow:'СОПРОВОЖДЕНИЕ В ОДНОМ МЕСТЕ',servicesTitle:'Больше, чем<br><em>просто покупка авто.</em>',servicesIntro:'Организуем процесс от поиска подходящего автомобиля до документов и передачи. Состав услуг согласуем для конкретной сделки.',photoCaption:'ПОИСК АВТО В ЕВРОПЕ',service1Title:'Поиск предложений',service1Text:'Европейские лизинговые аукционы и предложения дилеров с учётом ваших критериев.',service2Title:'Покупка и документы',service2Text:'Сопровождение покупки и подготовка документов по сделке.',service3Title:'Налоги и расчёты',service3Text:'Помощь с формальностями по акцизу и НДС в соответствии с условиями сделки.',service4Title:'Доставка в Польшу',service4Text:'Организация перевозки автомобиля в офис в Польше.',service5Title:'Присяжный перевод и техосмотр',service5Text:'Присяжный перевод документов и организация технического осмотра.',service6Title:'Регистрация и номера',service6Text:'Помощь с регистрацией автомобиля и получением регистрационных номеров.',taxNote:'Для юридических лиц может быть выставлена фактура VAT 23%. В описанной модели покупки частный покупатель освобождён от налога PCC 2%. Налоговые детали подтверждаются для конкретной сделки.',processEyebrow:'ПОНЯТНЫЙ ПРОЦЕСС',processTitle:'От первого разговора<br><em>до получения автомобиля.</em>',processIntro:'Понятные этапы сотрудничества помогают понимать, что происходит на каждом шаге.',step1Title:'Обсуждаем ваши потребности',step1Text:'Определяем параметры автомобиля, бюджет и ожидания.',step2Title:'Ищем предложения',step2Text:'Изучаем доступные автомобили на аукционах и у дилеров.',step3Title:'Организуем покупку',step3Text:'После согласования предложения переходим к покупке и документам.',step4Title:'Доставляем автомобиль',step4Text:'Организуем перевозку в Польшу и дальнейшее оформление.',step5Title:'Передаём автомобиль',step5Text:'Вы получаете автомобиль и подготовленные документы.',processFooter:'Уже присмотрели конкретный автомобиль?',processLink:'Пришлите нам объявление или требования',exportLabel:'ЭКСПОРТНОЕ СОПРОВОЖДЕНИЕ',exportEyebrow:'ЗА ПРЕДЕЛЫ ЕВРОСОЮЗА',exportTitle:'Покупка в Европе.<br><em>Экспорт дальше.</em>',exportText:'Организуем сопровождение экспорта автомобилей за пределы ЕС в страны, куда экспорт возможен. Необходимые документы и процедуры зависят от направления и конкретной сделки.',exportPoint1:'Подготовка экспортных документов EX',exportPoint2:'Помощь с организацией транзитных номеров',exportPoint3:'Проверка возможности экспорта в страну назначения',exportButton:'Узнать об экспорте',meetingEyebrow:'КАК ВАМ УДОБНО',meetingTitle:'Давайте встретимся<br><em>на ваших условиях.</em>',meetingIntro:'Начать сотрудничество можно так, как лучше всего вписывается в ваш график.',meeting1Title:'В нашем офисе',meeting1Text:'Приглашаем в офис в Варшаве, чтобы обсудить детали сотрудничества.',meeting1Foot:'ВАРШАВА, ПОЛЬША',meeting2Title:'В удобном месте',meeting2Text:'Можем договориться о встрече в другом удобном для вас месте.',meeting2Foot:'ПО ДОГОВОРЁННОСТИ',meeting3Title:'Дистанционно',meeting3Text:'Обсудим всё по телефону или онлайн — без необходимости куда-либо ехать.',meeting3Foot:'ТЕЛЕФОН / ОНЛАЙН',formEyebrow:'НАЧНЁМ С ОБСУЖДЕНИЯ',formTitle:'Расскажите нам<br><em>о желаемом автомобиле.</em>',formIntro:'Заполните форму, и мы подготовимся к разговору о ваших пожеланиях. Чем больше деталей вы укажете, тем проще будет определить следующий шаг.',formPromise:'Без обязательств — сначала узнаем, что вам нужно.',formPreferCall:'Предпочитаете поговорить?',formVehicleHeading:'Автомобиль и бюджет',clientType:'Кто вы?',clientPrivate:'Частный покупатель',clientBusiness:'Агент / дилер',destination:'Страна назначения',destinationPlaceholder:'Польша, Литва, ...',brand:'Марка',choose:'Выберите',other:'Другая',model:'Модель',modelPlaceholder:'например, X5, Model Y',year:'Год выпуска',yearPlaceholder:'Год',mileage:'Максимальный пробег',noPreference:'Без разницы',transmission:'Коробка передач',manual:'Механика',automatic:'Автомат',fuel:'Тип топлива',petrol:'Бензин',diesel:'Дизель',hybrid:'Гибрид',electric:'Электро',otherFuel:'Другое',body:'Тип кузова',wagon:'Универсал',convertible:'Кабриолет',budget:'Бюджет',budgetAny:'Без конкретного лимита',budgetOver:'свыше 50 000 €',formContactHeading:'Контактные данные',name:'Имя',namePlaceholder:'Ваше имя',phone:'Телефон',phonePlaceholder:'+48 ...',email:'Электронная почта',requirements:'Дополнительная информация',requirementsPlaceholder:'Цвет, привод, комплектация, предпочтительный рынок...',privacy:'Указывая контактные данные, вы соглашаетесь на связь по вашему запросу.',sendWhatsApp:'Отправить через WhatsApp',sendTelegram:'Отправить через Telegram',sendTelegramReady:'Открываем Telegram. Текст заявки скопирован — вставьте его в чат и отправьте.',sendTelegramCopyFailed:'Открываем Telegram. Скопируйте данные формы и вставьте их в чат, чтобы отправить заявку.',sendEmail:'Отправить на e-mail',formErrorContact:'Укажите хотя бы номер телефона или адрес электронной почты.',formSuccessEmail:'Открываем почтовую программу с подготовленным сообщением.',formSuccessWhatsApp:'Открываем WhatsApp с подготовленным сообщением.',emailSubject:'Запрос на автомобиль — AutoAgency',contactEyebrow:'ДАВАЙТЕ ОБСУДИМ',contactTitle:'Остались вопросы?<br><em>Мы на связи.</em>',contactIntro:'Свяжитесь с нами удобным способом или посетите наш офис в Варшаве.',contactEmailLabel:'ЭЛЕКТРОННАЯ ПОЧТА',contactPhoneLabel:'ТЕЛЕФОН / МЕССЕНДЖЕР',contactAddressLabel:'ОФИС',openMap:'Открыть карту',footerLine:'Европейский рынок. Понятный процесс. Один партнёр.',backTop:'Наверх',footerDisclaimer:'Состав услуг и условия сделки подтверждаем индивидуально.',formClientType:'Тип клиента',formDestination:'Страна назначения',formErrorYear:'Начальный год не может быть позже конечного.',brandOther:'Другая марка'
+  }
 };
 
-let currentLang = localStorage.getItem("autoAgencyLanguage") || "pl";
-
-function t(key) {
-    return translations[currentLang][key] || translations.pl[key] || key;
-}
-
+let currentLang = localStorage.getItem('autoAgencyLanguage') || 'pl';
+if (!translations[currentLang]) currentLang = 'pl';
+function t(key) { return translations[currentLang][key] || translations.pl[key] || key; }
 function setLanguage(lang) {
-    if (!translations[lang]) return;
-    currentLang = lang;
-    localStorage.setItem("autoAgencyLanguage", lang);
-    document.documentElement.lang = lang;
-
-    document.querySelectorAll("[data-i18n]").forEach(element => {
-        const value = translations[lang][element.dataset.i18n];
-        if (value) element.textContent = value;
-    });
-
-    document.querySelectorAll("[data-placeholder]").forEach(element => {
-        const value = translations[lang][element.dataset.placeholder];
-        if (value) element.placeholder = value;
-    });
-
-    document.querySelectorAll(".lang-btn").forEach(button => {
-        button.classList.toggle("active", button.dataset.lang === lang);
-    });
-}
-
-function fillYears() {
-    const from = document.getElementById("yearFrom");
-    const to = document.getElementById("yearTo");
-    const currentYear = new Date().getFullYear();
-
-    from.innerHTML = `<option value="">${t("yearPlaceholder")}</option>`;
-    to.innerHTML = `<option value="">${t("yearPlaceholder")}</option>`;
-
-    for (let year = currentYear; year >= 2000; year--) {
-        from.insertAdjacentHTML("beforeend", `<option value="${year}">${year}</option>`);
-        to.insertAdjacentHTML("beforeend", `<option value="${year}">${year}</option>`);
+  if (!translations[lang]) return;
+  currentLang = lang;
+  try { localStorage.setItem('autoAgencyLanguage', lang); } catch (_) {}
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const value = translations[lang][el.dataset.i18n];
+    if (value !== undefined) {
+      if (['heroTitle','introKicker','audienceTitle','servicesTitle','processTitle','exportTitle','meetingTitle','formTitle','contactTitle'].includes(el.dataset.i18n)) el.innerHTML = value;
+      else el.textContent = value;
     }
+  });
+  document.querySelectorAll('[data-placeholder]').forEach(el => {
+    const value = translations[lang][el.dataset.placeholder];
+    if (value !== undefined) el.placeholder = value;
+  });
+  document.querySelectorAll('[data-lang]').forEach(btn => {
+    const active = btn.dataset.lang === lang;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+  document.title = lang === 'ru' ? 'AutoAgency — автомобили из Европы' : lang === 'en' ? 'AutoAgency — cars from Europe' : 'AutoAgency — samochody z Europy';
+  const description = document.querySelector('meta[name="description"]');
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  const ogDescription = document.querySelector('meta[property="og:description"]');
+  if (description) description.content = translations[lang].metaDescription;
+  if (ogTitle) ogTitle.content = document.title;
+  if (ogDescription) ogDescription.content = translations[lang].metaDescription;
 }
-
-function selectedValue(name) {
-    const checked = document.querySelector(`input[name="${name}"]:checked`);
-    return checked ? checked.value : "";
+function fillYears() {
+  const from = document.getElementById('yearFrom');
+  const to = document.getElementById('yearTo');
+  const oldFrom = from.value, oldTo = to.value;
+  const placeholder = t('yearPlaceholder');
+  from.innerHTML = `<option value="">${placeholder}</option>`;
+  to.innerHTML = `<option value="">${placeholder}</option>`;
+  for (let y = new Date().getFullYear(); y >= 2000; y--) {
+    from.add(new Option(String(y), String(y)));
+    to.add(new Option(String(y), String(y)));
+  }
+  from.value = oldFrom; to.value = oldTo;
 }
-
-function displayValue(value) {
-    const map = {
-        Manual: t("manual"),
-        Automatic: t("automatic"),
-        Any: t("noPreference"),
-        Petrol: t("petrol"),
-        Diesel: t("diesel"),
-        Hybrid: t("hybrid"),
-        Electric: t("electric"),
-        Wagon: t("wagon"),
-        Convertible: t("convertible")
-    };
-    return map[value] || value || t("noPreference");
+function optionText(select) { return select.selectedOptions[0]?.textContent?.trim() || t('noPreference'); }
+function formData() {
+  const value = id => document.getElementById(id).value.trim();
+  return {
+    clientType: optionText(document.getElementById('clientType')),
+    destination: value('destination') || t('noPreference'), brand: !value('brand') ? t('noPreference') : value('brand') === 'other' ? t('other') : value('brand'), model: value('model') || t('noPreference'),
+    yearFrom: value('yearFrom'), yearTo: value('yearTo'), mileage: value('mileage') || t('noPreference'),
+    transmission: optionText(document.getElementById('transmission')), fuel: optionText(document.getElementById('fuel')), body: optionText(document.getElementById('body')),
+    budget: optionText(document.getElementById('budget')), name: value('contactName'), phone: value('contactPhone'), email: value('contactEmail'), requirements: value('requirements')
+  };
 }
-
-function getFormData() {
-    return {
-        brand: document.getElementById("brand").value,
-        model: document.getElementById("model").value.trim(),
-        yearFrom: document.getElementById("yearFrom").value,
-        yearTo: document.getElementById("yearTo").value,
-        mileage: document.getElementById("mileage").value,
-        transmission: displayValue(selectedValue("transmission")),
-        fuel: displayValue(selectedValue("fuel")),
-        body: displayValue(selectedValue("body")),
-        budget: document.getElementById("budget").value,
-        name: document.getElementById("contactName").value.trim(),
-        phone: document.getElementById("contactPhone").value.trim(),
-        email: document.getElementById("contactEmail").value.trim(),
-        requirements: document.getElementById("requirements").value.trim()
-    };
+function buildMessage(d) {
+  const year = d.yearFrom || d.yearTo ? `${d.yearFrom || '—'} – ${d.yearTo || '—'}` : t('noPreference');
+  return [
+    'AUTOAGENCY — '+(currentLang === 'ru' ? 'запрос' : currentLang === 'en' ? 'enquiry' : 'zapytanie'), '',
+    `${t('formClientType')}: ${d.clientType}`, `${t('formDestination')}: ${d.destination}`,
+    `${t('brand')}: ${d.brand}`, `${t('model')}: ${d.model}`, `${t('year')}: ${year}`, `${t('mileage')}: ${d.mileage}`,
+    `${t('transmission')}: ${d.transmission}`, `${t('fuel')}: ${d.fuel}`, `${t('body')}: ${d.body}`, `${t('budget')}: ${d.budget}`,
+    '', `${t('name')}: ${d.name || '—'}`, `${t('phone')}: ${d.phone || '—'}`, `${t('email')}: ${d.email || '—'}`, '',
+    `${t('requirements')}:`, d.requirements || '—'
+  ].join('\n');
 }
-
-function buildMessage(data) {
-    const year = data.yearFrom || data.yearTo
-        ? `${data.yearFrom || "?"} — ${data.yearTo || "?"}`
-        : t("noPreference");
-
-    const mileage = data.mileage
-        ? `${Number(data.mileage).toLocaleString("pl-PL")} km`
-        : t("noPreference");
-
-    return [
-        "AUTO AGENCY — zapytanie / enquiry",
-        "",
-        `${t("brand")}: ${data.brand || t("noPreference")}`,
-        `${t("model")}: ${data.model || t("noPreference")}`,
-        `${t("year")}: ${year}`,
-        `${t("mileage")}: ${mileage}`,
-        `${t("transmission")}: ${data.transmission}`,
-        `${t("fuel")}: ${data.fuel}`,
-        `${t("body")}: ${data.body}`,
-        `${t("budget")}: ${data.budget || t("budgetAny")}`,
-        "",
-        `${t("name")}: ${data.name || "-"}`,
-        `${t("phone")}: ${data.phone || "-"}`,
-        `${t("email")}: ${data.email || "-"}`,
-        "",
-        `${t("requirements")}:`,
-        data.requirements || "-"
-    ].join("\n");
+function validate(data) {
+  const message = document.getElementById('formMessage');
+  message.classList.remove('error');
+  if (!data.phone && !data.email) { message.textContent = t('formErrorContact'); message.classList.add('error'); return false; }
+  if (data.yearFrom && data.yearTo && Number(data.yearFrom) > Number(data.yearTo)) { message.textContent = t('formErrorYear'); message.classList.add('error'); return false; }
+  return true;
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    setLanguage(currentLang);
-    fillYears();
-
-    document.querySelectorAll(".lang-btn").forEach(button => {
-        button.addEventListener("click", () => {
-            setLanguage(button.dataset.lang);
-            fillYears();
-        });
-    });
-
-    const form = document.getElementById("carForm");
-    const message = document.getElementById("formMessage");
-
-    form.addEventListener("submit", event => {
-        event.preventDefault();
-        const data = getFormData();
-
-        if (!data.phone && !data.email) {
-            message.textContent = t("formErrorContact");
-            return;
-        }
-
-        const body = buildMessage(data);
-        const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(t("emailSubject"))}&body=${encodeURIComponent(body)}`;
-
-        message.textContent = t("formSuccessEmail");
-        window.location.href = mailto;
-    });
-
-    document.getElementById("whatsappButton").addEventListener("click", () => {
-        const data = getFormData();
-
-        if (!data.phone && !data.email) {
-            message.textContent = t("formErrorContact");
-            return;
-        }
-
-        const body = buildMessage(data);
-        const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(body)}`;
-
-        message.textContent = t("formSuccessWhatsApp");
-        window.open(url, "_blank", "noopener,noreferrer");
-    });
-
-    const menuToggle = document.getElementById("menuToggle");
-    const nav = document.getElementById("mainNav");
-
-    menuToggle.addEventListener("click", () => {
-        const open = nav.classList.toggle("open");
-        menuToggle.setAttribute("aria-expanded", String(open));
-    });
-
-    nav.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-            nav.classList.remove("open");
-            menuToggle.setAttribute("aria-expanded", "false");
-        });
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  setLanguage(currentLang); fillYears(); document.getElementById('yearNow').textContent = new Date().getFullYear();
+  document.querySelectorAll('[data-lang]').forEach(btn => btn.addEventListener('click', () => { setLanguage(btn.dataset.lang); fillYears(); }));
+  const form = document.getElementById('carForm'), message = document.getElementById('formMessage');
+  form.addEventListener('submit', event => {
+    event.preventDefault(); const data = formData(); if (!validate(data)) return;
+    const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(t('emailSubject'))}&body=${encodeURIComponent(buildMessage(data))}`;
+    message.textContent = t('formSuccessEmail'); window.location.href = mailto;
+  });
+  document.getElementById('whatsappButton').addEventListener('click', () => {
+    const data = formData(); if (!validate(data)) return;
+    message.textContent = t('formSuccessWhatsApp');
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(buildMessage(data))}`, '_blank', 'noopener,noreferrer');
+  });
+  document.getElementById('telegramButton').addEventListener('click', async () => {
+    const data = formData(); if (!validate(data)) return;
+    const enquiry = buildMessage(data);
+    // A personal Telegram account cannot receive a prefilled message directly from a static website.
+    // Copy the enquiry and open the requested chat so the visitor can paste and send it.
+    let copied = false;
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(enquiry);
+        copied = true;
+      } else {
+        const temporary = document.createElement('textarea');
+        temporary.value = enquiry;
+        temporary.setAttribute('readonly', '');
+        temporary.style.position = 'fixed';
+        temporary.style.opacity = '0';
+        document.body.appendChild(temporary);
+        temporary.select();
+        copied = document.execCommand('copy');
+        temporary.remove();
+      }
+    } catch (error) {
+      copied = false;
+    }
+    message.textContent = copied ? t('sendTelegramReady') : t('sendTelegramCopyFailed');
+    window.open('https://t.me/GhipnoMops', '_blank', 'noopener,noreferrer');
+  });
+  const toggle = document.getElementById('menuToggle'), nav = document.getElementById('mainNav');
+  toggle.addEventListener('click', () => { const open = nav.classList.toggle('open'); toggle.setAttribute('aria-expanded', String(open)); document.body.classList.toggle('menu-open', open); });
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.classList.remove('menu-open'); }));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.classList.remove('menu-open'); } });
 });
