@@ -22,3 +22,27 @@
 .brand-footer .brand-logo { width: 54px; height: 54px; max-height: none; }
 @media (min-width: 601px) { .intro-band .wrap { width: min(1400px, calc(100% - 42px)); } }
 @media (max-width: 600px) { .hero-content { padding-top: 76px; } .hero .eyebrow { font-size: clamp(29px, 8vw, 38px); line-height: 1.15; } .intro-band .wrap { width: calc(100% - 38px); } .inventory-contact-cta { margin-top: -8px; } }
+
+
+/* ЛОГОТИП */
+.site-header .brand-logo {
+    width: 58px;
+    height: 58px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+/* ЗАГОЛОВОК */
+.hero .eyebrow {
+    position: relative;
+    top: -15px;
+}
+
+/* ОСНОВНОЙ ТЕКСТ, КНОПКИ И ПОДПИСЬ */
+.hero-lead,
+.hero-actions,
+.hero-note {
+    position: relative;
+    top: 15px;
+}
