@@ -337,3 +337,17 @@ h2 em,
 .footer-languages button.active {
   border-color: var(--aa-accent) !important;
 }
+
+
+/* Contact CTA below the inventory heading */
+.inventory-contact-cta {
+  display: flex;
+  justify-content: flex-end;
+  margin: 18px 0 26px;
+}
+@media (max-width: 640px) {
+  .inventory-contact-cta {
+    justify-content: flex-start;
+    margin: 14px 0 22px;
+  }
+}

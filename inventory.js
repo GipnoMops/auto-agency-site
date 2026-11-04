@@ -4,21 +4,21 @@
 
   const languageCopy = {
     pl: {
-      nav: 'Samochody w ofercie', eyebrow: 'WYBRANE SAMOCHODY', title: 'Samochody <em>w ofercie.</em>',
+      contactCta: 'Zainteresowany? Skontaktuj się z nami', nav: 'Samochody w ofercie', eyebrow: 'WYBRANE SAMOCHODY', title: 'Samochody <em>w ofercie.</em>',
       mileage: 'Przebieg', fuel: 'Paliwo', engine: 'Silnik', gearbox: 'Skrzynia', drive: 'Napęd', body: 'Nadwozie',
       previous: 'Poprzednie samochody', next: 'Następne samochody', chooseSlide: 'Wybierz grupę samochodów',
       fuelDiesel: 'Diesel', fuelPetrol: 'Benzyna', fuelHybrid: 'Hybryda, benzyna', fuelElectric: 'Elektryczny',
       automatic: 'Automatyczna', awd: '4×4', fwd: 'Na przednie koła', rwd: 'Na tylne koła', wagon: 'Kombi', sedan: 'Sedan', suv: 'SUV'
     },
     en: {
-      nav: 'Cars in stock', eyebrow: 'SELECTED VEHICLES', title: 'Cars <em>in stock.</em>',
+      contactCta: 'Interested? Get in touch with us', nav: 'Cars in stock', eyebrow: 'SELECTED VEHICLES', title: 'Cars <em>in stock.</em>',
       mileage: 'Mileage', fuel: 'Fuel', engine: 'Engine', gearbox: 'Transmission', drive: 'Drivetrain', body: 'Body type',
       previous: 'Previous cars', next: 'Next cars', chooseSlide: 'Choose car slide',
       fuelDiesel: 'Diesel', fuelPetrol: 'Petrol', fuelHybrid: 'Petrol hybrid', fuelElectric: 'Electric',
       automatic: 'Automatic', awd: 'AWD', fwd: 'Front-wheel drive', rwd: 'Rear-wheel drive', wagon: 'Estate', sedan: 'Sedan', suv: 'SUV'
     },
     ru: {
-      nav: 'Автомобили в наличии', eyebrow: 'ПОДБОРКА АВТОМОБИЛЕЙ', title: 'Автомобили <em>в наличии.</em>',
+      contactCta: 'Заинтересовались? Свяжитесь с нами', nav: 'Автомобили в наличии', eyebrow: 'ПОДБОРКА АВТОМОБИЛЕЙ', title: 'Автомобили <em>в наличии.</em>',
       mileage: 'Пробег', fuel: 'Топливо', engine: 'Двигатель', gearbox: 'Коробка', drive: 'Привод', body: 'Кузов',
       previous: 'Предыдущие автомобили', next: 'Следующие автомобили', chooseSlide: 'Выбрать группу автомобилей',
       fuelDiesel: 'Дизель', fuelPetrol: 'Бензин', fuelHybrid: 'Бензиновый гибрид', fuelElectric: 'Электрический',
@@ -98,9 +98,7 @@
       [copy.mileage, car.mileage],
       [copy.engine, car.engine],
       [copy.fuel, copy[car.fuel]],
-      [copy.gearbox, copy[car.gearbox]],
-      [copy.drive, copy[car.drive]],
-      [copy.body, copy[car.body]]
+      [copy.gearbox, copy[car.gearbox]]
     ];
     const specMarkup = specs.map(([label, value]) => `<li class="inventory-spec"><span class="inventory-spec-label">${escapeHtml(label)}</span><span class="inventory-spec-value">${escapeHtml(value)}</span></li>`).join('');
     return `<article class="inventory-card" role="group" aria-roledescription="slide" aria-label="${cardIndex + 1} / ${cars.length}">
