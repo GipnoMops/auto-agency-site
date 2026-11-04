@@ -1,0 +1,353 @@
+/* Inventory carousel — additive styles; existing site styles remain untouched. */
+.inventory {
+  overflow: hidden;
+  background: #f3f3ee;
+  color: #191b17;
+}
+
+.inventory .section-top {
+  align-items: end;
+  margin-bottom: 2.2rem;
+}
+
+.inventory h2 {
+  max-width: 700px;
+}
+
+.inventory h2 em {
+  color: #687255;
+  font-style: normal;
+}
+
+.inventory .section-aside {
+  max-width: 390px;
+}
+
+.inventory-carousel {
+  --inventory-gap: 22px;
+  width: 100%;
+}
+
+.inventory-viewport {
+  overflow: hidden;
+  width: 100%;
+  padding: 2px 1px 8px;
+}
+
+.inventory-track {
+  display: flex;
+  align-items: stretch;
+  gap: var(--inventory-gap);
+  transform: translateX(0);
+  transition: transform 420ms cubic-bezier(.22,.7,.2,1);
+  will-change: transform;
+}
+
+.inventory-card {
+  flex: 0 0 calc((100% - (2 * var(--inventory-gap))) / 3);
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid rgba(26, 29, 23, .09);
+  border-radius: 3px;
+  box-shadow: 0 8px 24px rgba(23, 25, 20, .045);
+}
+
+.inventory-card-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: #dfe1d9;
+}
+
+.inventory-card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.inventory-card:hover .inventory-card-media img {
+  transform: scale(1.035);
+}
+
+.inventory-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 22px 22px 20px;
+}
+
+.inventory-card-index {
+  margin-bottom: 10px;
+  color: #777d6b;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+}
+
+.inventory-card-title {
+  margin: 0;
+  color: #1c1e19;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(1.05rem, 1.35vw, 1.28rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.inventory-card-year {
+  margin: 5px 0 18px;
+  color: #6b705f;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.inventory-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px 14px;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.inventory-spec {
+  min-width: 0;
+  padding-top: 10px;
+  border-top: 1px solid #e7e8e1;
+}
+
+.inventory-spec-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #818578;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.inventory-spec-value {
+  display: block;
+  color: #282b24;
+  font-size: .83rem;
+  font-weight: 600;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.inventory-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 22px;
+}
+
+.inventory-controls {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 14px;
+}
+
+.inventory-arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #d4d7cc;
+  border-radius: 50%;
+  color: #24271f;
+  background: transparent;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.inventory-arrow:hover:not(:disabled) {
+  color: #fff;
+  border-color: #697455;
+  background: #697455;
+}
+
+.inventory-arrow:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+}
+
+.inventory-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.inventory-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c6c9bd;
+  cursor: pointer;
+  transition: width 180ms ease, border-radius 180ms ease, background 180ms ease;
+}
+
+.inventory-dot[aria-current="true"] {
+  width: 22px;
+  border-radius: 8px;
+  background: #697455;
+}
+
+@media (max-width: 1050px) {
+  .inventory-carousel { --inventory-gap: 18px; }
+  .inventory-card { flex-basis: calc((100% - var(--inventory-gap)) / 2); }
+  .inventory-card-content { padding: 20px; }
+  .inventory-card-title { font-size: 1.12rem; }
+}
+
+@media (max-width: 600px) {
+  .inventory-carousel { --inventory-gap: 0px; }
+  .inventory .section-top { margin-bottom: 1.6rem; }
+  .inventory-card { flex-basis: 100%; }
+  .inventory-card-content { padding: 20px 19px 19px; }
+  .inventory-card-title { font-size: 1.2rem; }
+  .inventory-specs { gap: 12px; }
+  .inventory-bottom { align-items: flex-start; flex-direction: column; gap: 17px; }
+  .inventory-controls { align-self: stretch; justify-content: space-between; }
+  .inventory-dots { flex: 1; justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inventory-track,
+  .inventory-card-media img,
+  .inventory-arrow,
+  .inventory-dot { transition: none; }
+}
+
+/* Refined accents and header logo. Loaded after style.css, so these are intentional overrides. */
+:root {
+  --aa-accent: #74884f;
+  --aa-accent-dark: #596b39;
+}
+
+.inventory .section-top {
+  display: block;
+}
+
+.inventory h2 em {
+  color: var(--aa-accent);
+}
+
+.inventory-bottom {
+  justify-content: flex-end;
+}
+
+.inventory-spec-label {
+  color: #747b65;
+}
+
+.inventory-arrow:hover:not(:disabled) {
+  border-color: var(--aa-accent);
+  background: var(--aa-accent);
+}
+
+.inventory-dot[aria-current="true"] {
+  background: var(--aa-accent);
+}
+
+/* Slightly brighter green throughout the existing site. */
+.eyebrow-line,
+.intro-stamp,
+.btn-accent,
+.btn-whatsapp,
+.btn-telegram,
+.btn-form,
+.btn-dark,
+.process-footer .text-link,
+.export-points li > span:first-child,
+.configurator-promise .promise-check,
+.map-link:hover,
+.back-top:hover,
+.lang-btn.active {
+  --site-accent: var(--aa-accent);
+}
+
+.eyebrow-line {
+  background-color: var(--aa-accent) !important;
+}
+
+.btn-accent {
+  background-color: var(--aa-accent) !important;
+  border-color: var(--aa-accent) !important;
+}
+
+.btn-accent:hover,
+.btn-accent:focus-visible {
+  background-color: var(--aa-accent-dark) !important;
+  border-color: var(--aa-accent-dark) !important;
+}
+
+h2 em,
+.section-top h2 em {
+  color: var(--aa-accent) !important;
+}
+
+.intro-stamp {
+  border-color: var(--aa-accent) !important;
+}
+
+.site-header .brand-logo {
+  width: clamp(132px, 12vw, 158px) !important;
+  height: auto !important;
+  filter: brightness(1.08) contrast(1.16) drop-shadow(0 1px 1px rgba(0, 0, 0, .28));
+}
+
+.site-header .brand {
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .site-header .brand-logo {
+    width: 132px !important;
+  }
+}
+
+/* Use the brighter accent on a few additional existing UI details. */
+.intro-stamp span,
+.card-index,
+.step-number,
+.form-heading > span,
+.meeting-index,
+.meeting-icon,
+.meeting-foot,
+.configurator-promise .promise-check,
+.export-points li > span:first-child,
+.language-switcher .lang-btn.active,
+.footer-languages button.active {
+  color: var(--aa-accent) !important;
+}
+
+.language-switcher .lang-btn.active,
+.footer-languages button.active {
+  border-color: var(--aa-accent) !important;
+}
+
+
+/* Contact CTA below the inventory heading */
+.inventory-contact-cta {
+  display: flex;
+  justify-content: flex-end;
+  margin: 18px 0 26px;
+}
+@media (max-width: 640px) {
+  .inventory-contact-cta {
+    justify-content: flex-start;
+    margin: 14px 0 22px;
+  }
+}
