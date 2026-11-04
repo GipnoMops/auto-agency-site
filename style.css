@@ -36,7 +36,7 @@
 /* ЗАГОЛОВОК */
 .hero .eyebrow {
     position: relative;
-    top: -100px;
+    top: -120px;
 }
 
 /* ОСНОВНОЙ ТЕКСТ, КНОПКИ И ПОДПИСЬ */
@@ -44,5 +44,5 @@
 .hero-actions,
 .hero-note {
     position: relative;
-    top: 250px;
+    top: 220px;
 }
